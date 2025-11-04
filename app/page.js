@@ -1,27 +1,22 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Select from "./components/select";
-import { useEffect, useState } from "react";
 import Footer from "./components/footer";
 import Masterchef from "./components/masterchef";
-import Navbar from "./components/navbar";
 
 export default function Home() {
   const router = useRouter();
-  const [table, settable] = useState(false);
-  useEffect(() => {
-    alert("The tables is booked");
-  }, [table]);
+
   return (
     <div>
       <div>
         <div className="bg-gray-900 h-13 w-full justify-between flex flex-row  ">
-          <div className="text-3xl text-amber-500 font-bold m-2 flex flex-row">
+          <div className="md:text-3xl text-xl text-amber-500 font-bold m-2 flex flex-row">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvu_NocAGYCF3RvpGXf9IpJQkuVX4M7gzZPA&s"
               className="h-24 w-24 rounded-full -mt-5"
             ></img>
-            Sahyadri Market
+            Sahyadri Cafe
           </div>
           <button className="bg-green-600 h-8 w-24 rounded-md m-3.5">
             Buy now
@@ -136,7 +131,7 @@ export default function Home() {
             <button
               className="h-11 w-34 ml-26 mt-4 rounded-lg bg-amber-900 text-xl font-medium"
               onClick={() => {
-                settable(true);
+                alert("The Table Is Booked");
               }}
             >
               Book a Table
@@ -407,8 +402,8 @@ export default function Home() {
           className="h-82 w-lg -mt-55 hidden md:block opacity-25"
         ></img>
       </div>
-      <Masterchef/>
-     
+      <Masterchef />
+
       <div className="bg-gray-100 w-screen">
         <div>
           <div className="pt-24 justify-self-center text-2xl text-amber-800 font-semibold">
@@ -457,7 +452,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </div>
