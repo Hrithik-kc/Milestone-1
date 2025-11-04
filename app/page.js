@@ -1,4 +1,17 @@
+"use client";
+import { useRouter } from "next/navigation";
+import Select from "./components/select";
+import { useEffect, useState } from "react";
+import Footer from "./components/footer";
+import Masterchef from "./components/masterchef";
+import Navbar from "./components/navbar";
+
 export default function Home() {
+  const router = useRouter();
+  const [table, settable] = useState(false);
+  useEffect(() => {
+    alert("The tables is booked");
+  }, [table]);
   return (
     <div>
       <div>
@@ -39,23 +52,59 @@ export default function Home() {
           <div className="mb-6 hidden sm:block">
             ________________________________________________________________________________________________________________________________________________________
           </div>
-          <div className="flex flex-row m-4 justify-around font-bold  ">
-            <div className="hidden sm:block">
-              <button className="mx-9">Home</button>
-              <button className="mx-9">Pages</button>
-              <button className="mx-9">Menu</button>
-            </div>
+          <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
+            <Select op1="Home" op2="Home1" op3="Home2" />
+            <Select op1="Pages" op2="Login" op3="Resigter" />
+            <Select op1="Menu" op2="Menu1" op3="Menu2" />
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
               className=" h-15 w-auto"
             ></img>
-            <div className="hidden sm:block">
-              <button className="mx-9">Blogs</button>
-              <button className="mx-9">Shop</button>
-              <button className="mx-9">Contact Us</button>
-            </div>
+
+            <select
+              className="hidden sm:block h-4 w-20"
+              onChange={(e) => {
+                router.push(e.target.value);
+              }}
+            >
+              <option value="/Blogs" className=" text-black font-semibold">
+                Blogs
+              </option>
+              <option value="/Blogs" className=" text-black font-semibold">
+                Blogs Standard
+              </option>
+              <option value="/Blogs" className=" text-black font-semibold">
+                Blogs with Sidebar
+              </option>
+            </select>
+            <select
+              className="hidden sm:block h-4 w-20 "
+              onChange={(e) => {
+                router.push(e.target.value);
+              }}
+            >
+              <option value="/Blogs" className=" text-black font-semibold">
+                Shops
+              </option>
+              <option value="/chef" className=" text-black font-semibold">
+                Chef
+              </option>
+              <option value="/Blogs" className=" text-black font-semibold">
+                Cart
+              </option>
+            </select>
+            <button
+              className="hidden sm:block h-4 w-20 font-semibold"
+              onChange={(e) => {
+                router.push(e.target.value);
+              }}
+            >
+              <option value="/Blogs" className=" text-white font-semibold">
+                Contact Us
+              </option>
+            </button>
           </div>
-          <div className="text-4xl mt-10 md:mt-0 font-semibold justify-self-center md:text-8xl">
+          <div className="text-4xl mt-20 md:mt-0 font-semibold justify-self-center md:text-8xl">
             Best Restaurant
           </div>
         </div>
@@ -84,7 +133,12 @@ export default function Home() {
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
               placeholder="Time"
             ></input>
-            <button className="h-11 w-34 ml-26 mt-4 rounded-lg bg-amber-900 text-xl font-medium">
+            <button
+              className="h-11 w-34 ml-26 mt-4 rounded-lg bg-amber-900 text-xl font-medium"
+              onClick={() => {
+                settable(true);
+              }}
+            >
               Book a Table
             </button>
           </div>
@@ -121,8 +175,6 @@ export default function Home() {
               </div>
               <button className="bg-amber-800 h-10 w-10 rounded-full gap-8 block md:hidden"></button>
             </div>
-            {/* <button  className="bg-amber-800 h-10 w-10 rounded-full gap-8 block md:hidden">eeaad</button>
-              <div  className="bg-amber-800 h-10 w-10 rounded-full gap-8 pt-100"></div> */}
           </div>
         </div>
         <div className="md:flex md:flex-row flex flex-col justify-around m-16 ml-6.5  md:ml-35">
@@ -308,12 +360,13 @@ export default function Home() {
           </div>
         </div>
         <div className="md:flex md:flex-row flex flex-col justify-center md:justify-center-none">
-          <video
-            controls
+          <iframe
             className="md:h-100 h-120 md:rounded-3xl rounded-2xl ml-3 md:w-2xl w-100 md:mt-50 mt-28"
-          >
-            <source src="https://www.youtube.com/watch?v=F3zw1Gvn4Mk&t=55s" />
-          </video>
+            src="https://www.youtube.com/embed/F3zw1Gvn4Mk?si=dSRaWkM_P_7txhXQ"
+            title="YouTube video player"
+            allow="autoplay;picture-in-picture"
+            allowFullScreen
+          ></iframe>
           <div className=" bg-white shadow-md md:w-xl w-100 md:h-150 h-160 rounded-4xl md:ml-11 ml-3 md:mt-35 mt-20">
             <div className="flex flex-col">
               <div className="text-3xl font-semibold text-indigo-950 ml-10 mt-18">
@@ -351,68 +404,11 @@ export default function Home() {
         </div>
         <img
           src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F4.png&w=1920&q=75"
-          className="h-82 w-lg -mt-55 hidden md:block "
+          className="h-82 w-lg -mt-55 hidden md:block opacity-25"
         ></img>
       </div>
-      <div className="bg-gray-200 w-screen ">
-        <div className="text-amber-800 text-2xl font-medium justify-self-center pt-16">
-          MASTER CHEFS
-        </div>
-        <div className="font-semibold text-black md:text-5xl text-4xl mt-8 justify-self-center">
-          Meet Our Special Chefs
-        </div>
-        <div className="md:flex md:flex-row flex flex-col md:ml-0 ml-15 gap-15 justify-center mt-14">
-          <div className="flex flex-col">
-            <div className="border-3 border-gray-500 h-80 w-80  justify-items-center pt-4.5 rounded-full">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Xx9XhbkiDGC5FaOpzIcGhkRh6nh3FotVrA&s"
-                className="h-70 w-70 rounded-full"
-              ></img>
-            </div>
-            <div className="bg-amber-700 h-20 w-xs rounded-3xl -mt-28">
-              <div className="text-2xl font-semibold justify-self-center mt-3">
-                Alexander Petllo
-              </div>
-              <div className="font-medium text-black justify-self-center">
-                ASSITANT CHEF
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="border-3 border-gray-500 h-80 w-80  justify-items-center pt-4.5 rounded-full">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaPn7mbM87iM3GDCWjtbzmr6lKt3oRxcTVA&s"
-                className="h-70 w-70 rounded-full"
-              ></img>
-            </div>
-            <div className="bg-amber-700 h-20 w-xs rounded-3xl -mt-28">
-              <div className="text-2xl font-semibold justify-self-center mt-3">
-                Petro William
-              </div>
-              <div className="font-medium text-black justify-self-center">
-                MAIN CHEF
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="border-3 border-gray-500 h-80 w-80  justify-items-center pt-4.5 rounded-full">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKknhdG8ZhURW_zGMyguGiiPJ40DTzHvAxA&s"
-                className="h-70 w-70 rounded-full"
-              ></img>
-            </div>
-            <div className="bg-amber-700 h-20 w-xs rounded-3xl -mt-28">
-              <div className="text-2xl font-semibold justify-self-center mt-3">
-                Mendia Juxef
-              </div>
-              <div className="font-medium text-black justify-self-center">
-                BURDER KING
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="h-12 w-2xl bg-gray-200 mt-24"></div>
-      </div>
+      <Masterchef/>
+     
       <div className="bg-gray-100 w-screen">
         <div>
           <div className="pt-24 justify-self-center text-2xl text-amber-800 font-semibold">
@@ -461,87 +457,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="pt-16 md:mt-100 mt-270 "></div>
-          <div className="bg-gray-900 md:h-90 h-90 md:w-screen md:ml-0 md-2 w-100 md:flex md:flex-row flex flex-col md:justify-between  ml-3">
-            <img
-              src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F9.png&w=640&q=75"
-              className="h-90 w-98 pt-9 hidden md:block"
-            ></img>
-            <button className="bg-white h-10 w-10 rounded-full md:ml-0 ml-44 md:mt-69 mt-30 mr-12">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGn5Ev1U1xeZUs8dOVvPHFqKt8G2Sk269_OA&s"
-                className="w-8 h-8  rounded-full md:ml-1 ml-1"
-              ></img>
-            </button>
-            <img
-              src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
-              className="h-24 md:mt-56 mt-5 w-38 md:ml-0 ml-28 mr-14"
-            ></img>
-          </div>
-
-          <div className="justify-self-center md:h-120 h-280 md:w-6xl w-100  bg-black md:-mt-168 -mt-360 md:ml-0 ml-0">
-            <div className="md:flex md:flex-row flex flex-col md:ml-0 ml-8 text-white justify-around  pt-10">
-              <div>
-                <div className="text-2xl font-semibold p-7 ">About Us</div>
-                <div className="mt-3">Continued at zealously</div>
-                <div className="mt-2.5">necessary is Surrounded</div>
-                <div className="mt-2.5">sir motionless she end</div>
-                <div className="mt-2.5">literature. Gay direction</div>
-                <div className="mt-2.5">neglected.</div>
-                <div className="flex flex-row gap-3 mt-4">
-                  <div className="bg-gray-400 w-8 h-8">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvz6CaJ2FlG_VbRz7VdPIyvN77mpgGc_h8NQ&s"
-                      className="w-7 h-7 justify-self-center mt-0.5"
-                    ></img>
-                  </div>
-                  <div className="bg-gray-400 w-8 h-8">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSCdHOcw26caVnIs7MlcSrzD3sjUkxmMpkGQ&s"
-                      className="w-7 h-7 justify-self-center mt-0.5"
-                    ></img>
-                  </div>
-                  <div className="bg-gray-400 w-8 h-8">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOH6x3Yu4XLYtu4vuESZeD3bm4W5F6cpuOgA&s"
-                      className="w-7 h-7 justify-self-center mt-0.5"
-                    ></img>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl flex flex-col font-semibold pt-7 ">
-                  Explore
-                </div>
-                <div className="mt-8"> Company Profile</div>
-                <div className="mt-2.5">About</div>
-                <div className="mt-2.5">Help Center</div>
-                <div className="mt-2.5">Career</div>
-                <div className="mt-2.5">Features</div>
-                <div className="mt-2.5">Contact</div>
-              </div>
-              <div className="flex flex-col">
-                <div className="text-2xl font-semibold pt-7 ">Contact Info</div>
-                <div className="mt-6">175 10h Street, Office</div>
-                <div> 375 Berlin, De 21562</div>
-                <div className="mt-5">+123 34598768 </div>
-                <div className=""></div>
-                <div>+554 34598734</div>
-                <div className="mt-5">food@restan.com</div>
-              </div>
-              <div>
-                <div className="text-2xl font-semibold pt-7 ">Newsletter</div>
-                <div className="mt-8">Join our subscribers list to get</div>
-                <div className="mt-2.5">the latest news and special</div>
-                <div className="mt-2.5">offers</div>
-                <input
-                  className="h-8 md:mt-10 mt-2 w-40 "
-                  placeholder="Your Email"
-                ></input>
-                {/* <input type="checkbox ">In agree to the Privacy and Policy</input> */}
-              </div>
-            </div>
-          </div>
+          <Footer/>
         </div>
       </div>
     </div>
