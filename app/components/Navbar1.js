@@ -1,17 +1,17 @@
 export default function Navbar() {
-    return <div className = "static">
+    return <div className = "static ">
                     <div className = "h-[40%] w-[100%] bg-gray-500 rounded-[10px] flex flex-row">
                 <div className = "text-white font-bold text-[20px] pl-10 pt-3 sm:block">envato</div> 
-                <button className = "md:flex flex-auto md:bg-lime-500 font-bold text-[15px] text-white w-25 h-10 rounded-[10px] mt-2 mb-2 mr-10 ml-310 hover:bg-lime-600 pt-2 pl-10 ">Buy</button>
+                <button className = "md:flex flex-auto md:bg-lime-500 font-bold text-[15px] text-white w-25 h-10 rounded-[10px] mt-2 mb-2 mr-10 ml-280 hover:bg-lime-600 pt-2 pl-7  ">Buy</button>
             </div>
           {/* socials */}
             <div className = "flex flex-row md:h-15 w-[100%] bg-gradient-to-r from-yellow-600 via-yellow-400 to-amber-500 flex flex-row">
               <div className = "text-white  text-[17px] pl-15 pt-4">Phone: 123456789</div>
               <div className = "text-white  text-[17px] ml-30 pt-4 font-bold">Email: </div><div className = "text-white text-[17px] ml-2 pt-4">food@restan.com</div>
-              <div className = "ml-110 mt-2 h-10 w-10"><img src = "https://t3.ftcdn.net/jpg/08/16/25/90/360_F_816259007_nf2D0WfuuMYXzQGxdFnWOQuB9bUCakYI.jpg" className ="h-10 w-10 rounded-full"></img></div>
+              <div className = "ml-90 mt-2 h-10 w-10"><img src = "https://t3.ftcdn.net/jpg/08/16/25/90/360_F_816259007_nf2D0WfuuMYXzQGxdFnWOQuB9bUCakYI.jpg" className ="h-10 w-10 rounded-full"></img></div>
               <div className = "flex flex-row-reverse mr-10 pt-2.5">
               <div className="">
-                <select className="h-8 w-25 appearance-none ml-4   border-1 border-amber-500 text-center text-black font-bold rounded-md bg-white">
+                <select className="h-8 w-25 appearance-none ml-4 border-1 border-amber-500 text-center text-black font-bold rounded-md bg-white">
                   <option>English</option>
                   <option>French</option>
                   <option>Hindi</option>
@@ -34,7 +34,7 @@ export default function Navbar() {
               <img src = "https://coffeecafe.42web.io/cafe%20image/image%201.jpg"
               alt = "image" className = "h-120 w-[100%]" /> 
 
-              <div className = "grid grid-col-4 gap-2 absolute top-40 border-b-1 border-gray-500">
+              <div className = "grid grid-col-4 gap-2 absolute top-40 border-b-1 border-gray-500 w-[100%]">
                 <div>
                   <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75" 
                   className = " top-35 left-10 h-20 w-30 ml-10 mb-5"></img>
@@ -92,7 +92,7 @@ export default function Navbar() {
                   >
                   </img>
                 </div>
-                <div className = " border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-13 ml-230 mr-20 hover:bg-white hover:text-black cursor-pointer">
+                <div className = " border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-13 ml-210 mr-20 hover:bg-white hover:text-black cursor-pointer">
                   <button >RESERVATION</button>
                 </div>
                 </div>
