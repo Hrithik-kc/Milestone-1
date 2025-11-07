@@ -44,8 +44,6 @@ export default function Register() {
           </div>
           {/* register footer */}
           <div className = "h-100 w-[100%] bg-gray-400 flex flex-row">
-            
           </div>
-          
   </div>
 }
