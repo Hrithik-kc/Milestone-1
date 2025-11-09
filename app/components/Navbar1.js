@@ -1,11 +1,17 @@
+"use client";
+import  { useState } from "react";
+import { useRouter } from "next/navigation";
 export default function Navbar() {
-    return <div className = "static ">
-                    <div className = "h-[40%] w-[100%] bg-gray-500 rounded-[10px] flex flex-row">
-                <div className = "text-white font-bold text-[20px] pl-10 pt-3 sm:block">envato</div> 
-                <button className = "md:flex flex-auto md:bg-lime-500 font-bold text-[15px] text-white w-25 h-10 rounded-[10px] mt-2 mb-2 mr-10 ml-280 hover:bg-lime-600 pt-2 pl-7  ">Buy</button>
+    const [ToggleMenu, setToggleMenu] = useState(false);
+    const [TogglePages, setTogglePages] = useState(false);
+    const router = useRouter();
+    return <div className = "static ]">
+                    <div className = "h-[40%] w-[100%] bg-gray-500 flex flex-row">
+                <div className = "text-white font-bold text-[20px] pl-10 pt-3 sm:block">envato</div><div className = "mt-3 ml-1 text-[20px] text-white">Market</div>
+                <button className = "md:flex flex-auto md:bg-[#597A2E] font-bold text-[15px] text-white w-15 h-8  mt-2 mb-2 mr-10 ml-260 hover:bg-[#76AE11] pt-1 pl-9.5 ">Buy</button>
             </div>
           {/* socials */}
-            <div className = "flex flex-row md:h-15 w-[100%] bg-gradient-to-r from-yellow-600 via-yellow-400 to-amber-500 flex flex-row">
+            <div className = "flex flex-row md:h-15 w-[100%] bg-gradient-to-r from-[#8E5E2B] via-[#D4A96F] to-[#8E5E2B] flex flex-row">
               <div className = "text-white  text-[17px] pl-15 pt-4">Phone: 123456789</div>
               <div className = "text-white  text-[17px] ml-30 pt-4 font-bold">Email: </div><div className = "text-white text-[17px] ml-2 pt-4">food@restan.com</div>
               <div className = "ml-90 mt-2 h-10 w-10"><img src = "https://t3.ftcdn.net/jpg/08/16/25/90/360_F_816259007_nf2D0WfuuMYXzQGxdFnWOQuB9bUCakYI.jpg" className ="h-10 w-10 rounded-full"></img></div>
@@ -39,56 +45,79 @@ export default function Navbar() {
                   <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75" 
                   className = " top-35 left-10 h-20 w-30 ml-10 mb-5"></img>
                 </div>  
-                <div className = "ml-80 -mt-20">
+                <div className = "ml-80 -mt-20 ">
+                  <div className = "grid grid-cols-4">
                   {/* HOME */}
-                  <select className = " top-90 left-10 font-serif font-bold text-white text-[20px] w-45 ml-45 -mr-3 appearance-none bg-transparent border-none focus:outline-none ">
-                    <option>
-                     Home
-                    </option>
-                  </select>
-                  {/* PAGES */}
-                   <select className = " top-90 left-10 font-serif font-bold text-white bg text-[20px] w-50 -ml-11  appearance-none bg-transparent border-none focus:outline-none">
-                        <option className = "text-black">
-                          About Us
-                        </option>
-                        <option className = "text-black">
-                          Chef
-                        </option>
-                        <option className = "text-black">
-                        Chef Details
-                        </option>
-                   </select>
+                    <ul className ="flex flex-row">
+                    <li>
+                      <button
+                      className = "cursor-pointer text-[25px] text-white ml-15 font-serif font-semibold"
+                      onClick={() => router.push("/")}
+                      >Home
+                      </button>
+                    </li>
+                    </ul>
+                  {/*ABOUT*/}
+                      <button
+                      onClick={() =>{ 
+                        setTogglePages(!TogglePages);
+                        setToggleMenu(false);
+                      }}
+                      className = " absolute text-[25px] text-white ml-45 font-serif font-semibold w-20"
+                      >Pages
+                      </button>
+                      {TogglePages && (
+                     <ul className ="flex flex-row">
+                    <li>
+                      <div 
+                         className = {`${TogglePages ? "block" : "hidden"} absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-60 h-50 -ml-25 mt-10 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}>
+                        <div className = "mt-5 ml-5  ">
+                        <div className = "cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"
+                            onClick={() => router.push("")}
+                          ><a herf = "#" className = " text-[25px] text-black font-serif font-semibold ">About us</a></div>
+                        <div className = " mt-2 cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"
+                            onClick={() => router.push("../lgoin")}
+                          ><a herf = "#" className = "text-[25px] text-black font-serif font-semibold ">Login</a></div>
+                        <div className = "mt-2 cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"
+                            onClick={() => router.push("../register")}
+                          ><a herf = "#" className = " text-[25px] text-black font-serif font-semibold ">Register</a></div>
+                        </div>
+                      </div>
+                      </li>
+                    </ul>
+                    )}
                    {/* MENU */}
-                    <select className = " top-90 left-10 font-serif font-bold text-white text-[20px] w-45 -ml-15 appearance-none bg-transparent border-none focus:outline-none">
-                      <option className = "text-black">
-                        PAGES
-                      </option>
-                        <option className = "text-black">
-                          Menu Style One
-                        </option>
-                        <option className = "text-black">
-                          Menu Style Two
-                        </option>
-                        <option className = "text-black">
-                        Menu Style Three
-                        </option>
-                    </select>
+                      <button
+                      onClick={() =>{ 
+                        setToggleMenu(!ToggleMenu);
+                        setTogglePages(false);
+                      }}
+              
+                      className = "absolute text-[25px] text-white ml-75 font-serif font-semibold w-20"
+                      >Menu
+                      </button>
+                      {ToggleMenu && (
+                     <ul className ="flex flex-row">
+                    <li>
+                      <div  id = "Menudrop"
+                         className = {`${ToggleMenu ? "block" : "hidden"} absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-60 h-50 ml-7 mt-10 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}>
+                        <div className = "mt-5 ml-5  ">
+                        <div className = "cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"
+                            onClick={() => router.push("../menu")}
+                          ><a herf = "#" className = " text-[25px] text-black font-serif font-semibold ">Menu 1</a></div>
+                        <div className = "mt-5 cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"><a herf = "#" className = "text-[25px] text-black font-serif font-semibold ">Menu 2</a></div>
+                        <div className = "mt-5 cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"><a herf = "#" className = " text-[25px] text-black font-serif font-semibold ">Menu 3</a></div>
+                        </div>
+                      </div>
+                      </li>
+                    </ul>
+                    )}
                    {/* BLOG */}
-                     <select className = " top-90 left-10 font-serif font-bold text-white text-[20px] w-45 -ml-15 appearance-none bg-transparent border-none focus:outline-none">
-                        <option className = "text-black">
-                          Blog
-                        </option>
-                        <option className = "text-black">
-                          Blog
-                        </option>
-                        <option className = "text-black">
-                          Blog
-                        </option>
-                     </select>
+                  </div>
                 <div >
                   <img 
                     src = "https://www.kindpng.com/picc/m/478-4788427_shopping-cart-button-shopping-cart-logo-white-hd.png" alt="cart"
-                   className = "rounded-[300px]  h-15 w-15 -mt-10  ml-190 cursor-pointer"
+                   className = "rounded-[300px]  h-15 w-15 -mt-15  ml-190 cursor-pointer"
                   >
                   </img>
                 </div>
