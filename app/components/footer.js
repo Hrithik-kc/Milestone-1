@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 export default function Footer() {
   return (
@@ -8,7 +9,10 @@ export default function Footer() {
           src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F9.png&w=640&q=75"
           className="h-90 w-98 pt-9 hidden md:block opacity-45"
         ></img>
-        <button className="bg-white h-10 w-10 rounded-full md:ml-0 ml-44 md:mt-69 mt-30 mr-12">
+        <button className="bg-white h-10 w-10 rounded-full md:ml-0 ml-44 md:mt-69 mt-30 mr-12"
+        onClick={()=>{
+          scrollTo({top:0,behavior:"smooth"})
+        }}>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGn5Ev1U1xeZUs8dOVvPHFqKt8G2Sk269_OA&s"
             className="w-8 h-8  rounded-full md:ml-1 ml-1"

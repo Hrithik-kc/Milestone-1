@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import Select from "./components/select";
 import Footer from "./components/footer";
 import Masterchef from "./components/masterchef";
+import { navigate } from "next/dist/client/components/segment-cache-impl/navigation";
 
 export default function Home() {
   const router = useRouter();
@@ -108,7 +109,12 @@ export default function Home() {
       <div className="bg-gray-100 w-screen">
         <div className=" md:flex md:flex-row flex flex-col md:ml-0 -ml-27 ">
           <div className="bg-white h-125 w-96 ml-32 rounded-3xl mt-10 shadow-md">
-            <div className="bg-amber-700 h-20 w-20 rounded-full ml-11 -mt-8"></div>
+            <div className="bg-amber-700 h-20 w-20 rounded-full ml-11 -mt-8">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwt9XWa9NtaQTkc4On4Y-iOyWsKby8kiMHZxypYnPtLeOb3gKJW-BF7RAXzBKPnW6HxRQ&usqp=CAU"
+                className="rounded-full h-15 w-19 justify-self-center pt-5"
+              ></img>
+            </div>
             <div className="text-3xl text-black font-semibold ml-12 mt-10">
               Book a Table
             </div>
@@ -116,21 +122,17 @@ export default function Home() {
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
               placeholder="Phone"
             ></input>
-           
+
             <select className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400">
-              <option className=" text-black font-semibold">
-                1 Person
-              </option>
-              <option  className=" text-black font-semibold">
-                2 Person
-              </option>
+              <option className=" text-black font-semibold">1 Person</option>
+              <option className=" text-black font-semibold">2 Person</option>
               <option value="/Blogs" className=" text-black font-semibold">
                 3 Person
               </option>
             </select>
             <input
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              placeholder="Date" 
+              placeholder="Date"
             ></input>
             <input
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
@@ -294,10 +296,12 @@ export default function Home() {
                 <div>To perpetual do existence</div>
               </div>
             </div>
-            <button className="bg-red-950 rounded-full h-13 hover:bg-black center mt-6 w-36 font-semibold"
-            onClick={()=>{
-              router.push("/menu")
-            }}>
+            <button
+              className="bg-red-950 rounded-full h-13 hover:bg-black center mt-6 w-36 font-semibold"
+              onClick={() => {
+                router.push("/menu");
+              }}
+            >
               Order Now
             </button>
           </div>
