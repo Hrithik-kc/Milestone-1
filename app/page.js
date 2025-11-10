@@ -54,7 +54,7 @@ export default function Home() {
             <Select op1="Menu" op2="Menu1" op3="Menu2" />
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
-              className=" h-15 w-auto"
+              className=" h-15 w-auto md:mr-0 mr-28"
             ></img>
 
             <select
@@ -374,7 +374,7 @@ export default function Home() {
             className="md:h-100 h-120 md:rounded-3xl rounded-2xl ml-3 md:w-2xl w-100 md:mt-50 mt-28"
             src="https://www.youtube.com/embed/F3zw1Gvn4Mk?si=dSRaWkM_P_7txhXQ"
             title="YouTube video player"
-            allow="autoplay;picture-in-picture"
+            allow="autoplay "
             allowFullScreen
           ></iframe>
           <div className=" bg-white shadow-md md:w-xl w-100 md:h-150 h-160 rounded-4xl md:ml-11 ml-3 md:mt-35 mt-20">

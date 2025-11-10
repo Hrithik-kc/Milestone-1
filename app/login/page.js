@@ -1,6 +1,10 @@
+"use client"
+
 import Footer from "../components/footer";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router=useRouter();
   return (
     <div className="bg-white">
       <div className="h-[40%] w-screen bg-gray-500 rounded-[10px] flex flex-row ">
@@ -145,15 +149,19 @@ export default function Login() {
           </div>
           <div>
             <div className="text-gray-500 text-[17px] ml-20 mt-6">
-              Already have an account?
+                Dont have an account?
             </div>
-            <div className="text-[#B8860B] text-[17px] ml-70 -mt-6.5 underline cursor-pointer">
-              Login here
-            </div>
+            <button className="text-[#B8860B] text-[17px] ml-70 -mt-6.5 underline cursor-pointer"
+            onClick={() => {
+                router.push("/register");
+              }}
+>
+              Register here
+            </button>
           </div>
         </div>
       </div>
-      register bottom
+      
       
       <Footer/>
     </div>
