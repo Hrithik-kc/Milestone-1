@@ -1,14 +1,14 @@
 import React from "react";
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
       <div className="bg-gray-900 h-13 w-full justify-between flex flex-row  ">
-        <div className="text-3xl text-amber-500 font-bold m-2 flex flex-row">
+        <div className="md:text-3xl text-xl text-amber-500 font-bold m-2 flex flex-row">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvu_NocAGYCF3RvpGXf9IpJQkuVX4M7gzZPA&s"
             className="h-24 w-24 rounded-full -mt-5"
           ></img>
-          Sahyadri Market
+          Sahyadri Cafe
         </div>
         <button className="bg-green-600 h-8 w-24 rounded-md m-3.5">
           Buy now
@@ -16,7 +16,7 @@ export default function Navbar() {
       </div>
       <div>
         <img
-          src="https://cdn.pixabay.com/video/2024/02/25/201947-916877801_tiny.jpg"
+          src="https://b.zmtcdn.com/data/pictures/chains/6/18208896/855c9047d1ed6fbec59c8ee02183417c.jpg?fit=around|750:500&crop=750:500;*,*"
           className="h-140 w-screen"
         ></img>
         <div className="flex flex-row justify-around -mt-136 font-semibold ">
@@ -39,6 +39,15 @@ export default function Navbar() {
         <div className="mb-6 hidden sm:block">
           ________________________________________________________________________________________________________________________________________________________
         </div>
+      </div>
+      <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-36">
+        {props.tittle}
+      </div>
+      <div className="flex flex-row justify-center ">
+        <div className=" text-2xl  font-semibold mt-6">
+          {props.nav}
+        </div>
+        <div className="text-2xl mt-6">{props.current}</div>
       </div>
     </div>
   );
