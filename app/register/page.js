@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar1";
+import Navbar1 from "../components/Navbar1";
 import Footer1 from "../components/Footer1";
 export default function Register() {
   return  <div className ="bg-white">
           {/* navbar */}
           <div className = "">
             <div className = "absolute  top-120 left-140 font-semibold font-serif text-white text-[50px] flex justify-center items-center">REGISTER NOW</div>
-            <Navbar/>
+            <Navbar1/>
           </div>
           {/*register main*/}
           <div className = "md:h-[80%] w-[83%] shadow-xl/20 rounded-[5px] bg-white ml-30 mt-10 mb-10  flex flex-row">

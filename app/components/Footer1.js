@@ -1,6 +1,15 @@
+// import {} from "lucide-react";
 export  default function Footer1() {
     return <div>
-                    <div className = "h-[100%] w-[90%] bg-[#1C1C1C] grid grid-cols-4  ml-15 dark:bg-gradient-to-r from-[#D4D4D4] to-[#909090]">
+            <div className = " absolute mt-80 h-80 w-[100%] bg-[#121818] flex flex-row">
+              <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F9.png&w=640&q=75"
+              className = " mt-10 h-70 w-40"
+              ></img>
+              <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
+              className = "h-13 w-25 mt-50 -ml-10"
+              ></img>
+            </div>
+              <div className = " absolute h-[80%] w-[90%] bg-[#1C1C1C] grid grid-cols-4  ml-15 dark:bg-gradient-to-r from-[#D4D4D4] to-[#909090]">
               {/* about us */}
               <div className = " md:ml-10 mt-20 border-r-2 border-gray-600 pr-10 mb-20 ">
                 <div className = "font-bold text-[30px] text-white dark:text-black">About Us</div>
@@ -42,7 +51,14 @@ export  default function Footer1() {
                 <div className = "text-white text-[17px]  mb-5 -mt-5 mr-5 dark:text-black">Join our subscribers list to get the latest news and special offers. </div>
                 <input type = "email" placeholder="Your Email Address" className = "text-white w-60 h-10 mt-5 -ml-5 rounded-[5px] pl-2 border-b-1 border-b-gray-300 text-[16px] dark:text-black ">
                 </input>
+                <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                 width="30" 
+                 height="30"
+                  viewBox="0 0 24 24"
+                   fill="none" 
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" cursor-pointer lucide lucide-chevron-right-icon lucide-chevron-right ml-55 -mt-10 text-white"><path d="m9 18 6-6-6-6"/></svg>
             </div>
-          </div>
+            </div>
     </div>
 }

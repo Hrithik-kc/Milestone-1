@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar1";
-import Footer from "../components/Footer1";
+import Navbar1 from "../components/Navbar1";
+import Footer1 from "../components/Footer1";
 import {breakfastItems, dessertItems} from "../components/Menu";
 export default function Register() {
   return  <div className ="bg-white  dark:bg-black">
               <div>
-                <Navbar/>
+                <Navbar1/>
                 <div className = "absolute top-120 left-140 font-semibold font-serif text-white text-[50px] flex justify-center items-center ">
                     Food Menu
                 </div>
@@ -78,7 +78,7 @@ export default function Register() {
            {/*Dinner Menu*/}
           {/*menu bottom*/}
             <div>
-                <Footer/>
+                <Footer1/>
             </div>
           
         </div>
