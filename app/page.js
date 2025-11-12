@@ -49,9 +49,36 @@ export default function Home() {
             ________________________________________________________________________________________________________________________________________________________
           </div>
           <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
-            <Select op1="Home" op2="Home1" op3="Home2" />
+            {/* <Select op1="Home" op2="Home1" op3="Home2" /> */}
+            <select
+              className="hidden sm:block h-4 w-20"
+              onChange={(e) => {
+                router.push(e.target.value);
+              }}
+            >
+              <option className=" text-black font-semibold">Home</option>
+              <option value="/home1" className=" text-black font-semibold">
+                Home1
+              </option>
+              <option value="/home2" className=" text-black font-semibold">
+                Home2
+              </option>
+            </select>
             <Select op1="Pages" op2="Login" op3="Resigter" />
-            <Select op1="Menu" op2="Menu1" op3="Menu2" />
+            <select
+              className="hidden sm:block h-4 w-20"
+              onChange={(e) => {
+                router.push(e.target.value);
+              }}
+            >
+              <option className=" text-black font-semibold">Menu</option>
+              <option value="/menu" className=" text-black font-semibold">
+                Menu1
+              </option>
+              <option value="/menu" className=" text-black font-semibold">
+                Menu2
+              </option>
+            </select>
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
               className=" h-15 w-auto md:mr-0 mr-28"

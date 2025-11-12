@@ -15,7 +15,7 @@ const Select = (props) => {
         <option className="mx-9" >
           {props.op1}
         </option>
-        <option className=" text-black font-semibold" value="/Login">
+        <option className=" text-black font-semibold" value="/login">
           {props.op2}
         </option>
         <option className=" text-black font-semibold"value="/register">

@@ -7,8 +7,8 @@ export default function Login() {
   const router=useRouter();
   return (
     <div className="bg-white">
-      <div className="h-[40%] w-screen bg-gray-500 rounded-[10px] flex flex-row ">
-        <div className="text-white font-bold w-2xl text-[20px] pl-10 pt-3">
+      <div className="h-[40%] w-screen bg-gray-900 rounded-[10px] flex flex-row ">
+        <div className="text-amber-600 font-bold w-2xl text-[20px] pl-10 pt-3">
           Sahyadri Cafe
         </div>
         <button className=" bg-lime-500 font-bold text-[15px] text-white w-25 h-10 rounded-[10px] mt-2 mb-2 ml-210 hover:bg-lime-600">
@@ -59,7 +59,9 @@ export default function Login() {
           <div className="ml-30 -mt-20 justify-center">
             {/* HOME */}
             <select className=" top-90 left-10 font-serif font-bold text-white text-[20px] w-45 ml-45 -mr-3 appearance-none bg-transparent border-none focus:outline-none ">
-              <option>Home</option>
+              <option onClick={()=>{
+                router.push("./")
+              }}>Home</option>
             </select>
             {/* PAGES */}
             <select className=" top-90 left-10 font-serif font-bold text-white bg text-[20px] w-50 -ml-11  appearance-none bg-transparent border-none focus:outline-none">
