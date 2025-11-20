@@ -159,7 +159,8 @@ export default function Home() {
             </select>
             <input
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              placeholder="Date"
+              
+              type="Date"
             ></input>
             <input
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
@@ -182,8 +183,9 @@ export default function Home() {
               ></img>
               Our Popular Category
               <div className=" md:flex md:flex-row flex flex-col gap-8 ml-16">
-                <div className="bg-amber-800 h-10 w-10 rounded-full gap-8 hidden md:block"></div>
-                <div className="bg-amber-800 h-10 w-10 rounded-full hidden md:block"></div>
+                <div className="bg-amber-800 h-10 w-10 rounded-full gap-8 hidden md:block text-amber-50 pl-2.5" >&#60;
+                </div>
+                <div className="bg-amber-800 h-10 w-10 rounded-full hidden md:block text-amber-50 pl-2.5">&#62;</div>
               </div>
             </div>
             <div className="md:flex md:flex-row flex flex-col ">

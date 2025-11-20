@@ -1,5 +1,9 @@
+"use client"
 import React from "react";
+import Select from "../components/select";
+import { useRouter } from "next/navigation";
 export default function Navbar(props) {
+   const router = useRouter();
   return (
     <div>
       <div className="bg-gray-900 h-13 w-full justify-between flex flex-row  ">
@@ -39,15 +43,92 @@ export default function Navbar(props) {
         <div className="mb-6 hidden sm:block">
           ________________________________________________________________________________________________________________________________________________________
         </div>
+        <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
+          {/* <Select op1="Home" op2="Home1" op3="Home2" /> */}
+          <select
+            className="hidden sm:block h-4 w-20"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option className=" text-black font-semibold">Home</option>
+            <option value="/home1" className=" text-black font-semibold">
+              Home1
+            </option>
+            <option value="/home2" className=" text-black font-semibold">
+              Home2
+            </option>
+          </select>
+          <Select op1="Pages" op2="Login" op3="Resigter" />
+          <select
+            className="hidden sm:block h-4 w-20"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option className=" text-black font-semibold">Menu</option>
+            <option value="/menu" className=" text-black font-semibold">
+              Menu1
+            </option>
+            <option value="/menu" className=" text-black font-semibold">
+              Menu2
+            </option>
+          </select>
+          <img
+            src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=750&q=75"
+            className=" h-15 w-auto md:mr-0 mr-28"
+          ></img>
+
+          <select
+            className="hidden sm:block h-4 w-20"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option value="/Blogs" className=" text-black font-semibold">
+              Blogs
+            </option>
+            <option value="/Blogs" className=" text-black font-semibold">
+              Blogs Standard
+            </option>
+            <option value="/Blogs" className=" text-black font-semibold">
+              Blogs with Sidebar
+            </option>
+          </select>
+          <select
+            className="hidden sm:block h-4 w-20 "
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option value="/Blogs" className=" text-black font-semibold">
+              Shops
+            </option>
+            <option value="/chef" className=" text-black font-semibold">
+              Chef
+            </option>
+            <option value="/Blogs" className=" text-black font-semibold">
+              Cart
+            </option>
+          </select>
+          <button
+            className="hidden sm:block h-4 w-20 font-semibold"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option value="/Blogs" className=" text-white font-semibold">
+              Contact Us
+            </option>
+          </button>
+        </div>
       </div>
       <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-36">
         {props.tittle}
       </div>
       <div className="flex flex-row justify-center ">
-        <div className=" text-2xl  font-semibold mt-6">
-          {props.nav}
-        </div>
-        <div className="text-2xl mt-6">{props.current}</div>
+        <div className=" text-2xl text-black font-semibold mt-6">{props.nav}</div>
+        <div className="text-2xl text-black font-semibold  mt-6">{props.current}</div>
       </div>
     </div>
   );
