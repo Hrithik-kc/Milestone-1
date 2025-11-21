@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 export default function Navbar() {
     const [ToggleMenu, setToggleMenu] = useState(false);
     const [TogglePages, setTogglePages] = useState(false);
+    const [Toggle_side, setToggle_side] = useState(false);
     const router = useRouter();
     return <div className = "w-screen md:w-screen">
           <div className= " w-[100%] md:w-[100%]">
@@ -43,14 +44,29 @@ export default function Navbar() {
               alt = "image" className = "h-70 md:h-120 w-200 md:w-[100%]" /> 
 
               <div className = "grid grid-col-4 gap-2 absolute top-40 border-b-1 border-gray-500 w-[100%]">
-                {/* <button onClick={()}> */}
+                <button onClick={()=>{setToggle_side(!Toggle_side)}}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
-                {/* </button> */}
+                </button>
+                {Toggle_side && (<div
+                  className = "md:hidden rounded-r-[5px] h-[500px] w-[400px] absolute bg-gradient-to-r from-[#ececec] via-[#b5b5b5] to-[#929292] -mt-18">
+                    <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo.png&w=750&q=75" className = "h-25 w-30 pt-5 pl-5 "></img>
+                    <div className = "flex flex-col">
+                    <button onClick={() => router.push("../")} className = "text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">Home</button>
+                    <div className = " absolute mt-18 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                    <button onClick={() => router.push("../login")} className = "text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">Login</button>
+                    <div className = " absolute mt-35 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                    <button onClick={() => router.push("../menu")} className = "text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">Menu</button>
+                    <div className = " absolute mt-53 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                    <button className = "text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">Blogs</button>
+                    <div className = " absolute mt-70 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75" 
                   className = "-mt-17 md:-mt-5  md:left-10 h-20 md:h-15 w-32 md:w-25 ml-40 md:ml-10 md:mb-3"></img>
                 </div>  
-                <div className = " ml-20 md:ml-80 md:-mt-10 ">
+                <div className = " ml-20 md:ml-60 md:-mt-10 ">
                   <div className = "hidden md:block grid grid-cols-4">
                   {/* HOME */}
                     <ul className ="flex flex-row">
@@ -101,14 +117,14 @@ export default function Navbar() {
                         setTogglePages(false);
                       }}
               
-                      className = "absolute text-[18px] text-white ml-90 font-serif font-semibold w-20 -mt-6.5"
+                      className = "absolute text-[18px] text-white ml-85 font-serif font-semibold w-20 -mt-6.5"
                       >Menu
                       </button>
                       {ToggleMenu && (
                      <ul className ="flex flex-row">
                     <li>
                       <div  id = "Menudrop"
-                         className = {`${ToggleMenu ? "block" : "hidden"} absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-40 h-50 ml-93 mt-5 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}>
+                         className = {`${ToggleMenu ? "block" : "hidden"} absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-40 h-50 ml-86 mt-5 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}>
                         <div className = "mt-5 ml-5  ">
                         <div className = "cursor-pointer transiton delay-50 duration-300 ease-in-out hover:scale-110"
                             onClick={() => router.push("../menu")}
@@ -121,11 +137,20 @@ export default function Navbar() {
                     </ul>
                     )}
                    {/* BLOG */}
+                      <button
+                      className = "absolute text-[18px] text-white ml-120 font-serif font-semibold w-20 -mt-6.5"
+                      >Blog
+                      </button>
+                      {/*SHOPS*/}
+                      <button
+                      className = "absolute text-[18px] text-white ml-150 font-serif font-semibold w-20 -mt-6.5"
+                      >Shops
+                      </button>
                   </div>
                 <div >
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="block w-7 md:w-10 h-7 md:h-10 -mt-33 md:-mt-15 ml-65 md:ml-180 lucide lucide-shopping-basket-icon lucide-shopping-basket text-white"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="block w-7 md:w-10 h-7 md:h-10 -mt-33 md:-mt-15 ml-65 md:ml-200 lucide lucide-shopping-basket-icon lucide-shopping-basket text-white"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>
                 </div>
-                <div className = " hidden md:block border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-10 ml-200 hover:bg-white hover:text-black cursor-pointer">
+                <div className = " hidden md:block border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-10 ml-230 hover:bg-white hover:text-black cursor-pointer">
                   <button >RESERVATION</button>
                 </div>
                 </div>

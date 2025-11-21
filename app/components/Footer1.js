@@ -1,7 +1,7 @@
 // import {} from "lucide-react";
 export  default function Footer1() {
     return <div className = "dark:bg-white">
-            <div className = " hidden md:block absolute mt-90 h-150 md:h-80 w-full md:w-[100%] bg-[#121818] flex flex-row">
+            <div className = " hidden md:block absolute mt-90 h-130 md:h-80 w-full md:w-[100%] bg-[#121818] flex flex-row">
               <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F9.png&w=640&q=75"
               className = "hidden md:block mt-10 h-70 w-40 opacity-55"
               ></img>

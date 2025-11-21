@@ -30,7 +30,7 @@ export default function Register() {
                 <div className ="border-1 border-gray-600 h-10 w-15 ml-7 pl-3 pt-1.5 text-gray-600 font-bold mt-130 md:mt-30">Full</div></div>
                 <div>
                     {breakfastItems.map((item) => (
-                    <div className = "flex flex-row hover:bg-[#c7a480] hover:w-170 hover:rounded-[20px] , pb-3" key={item.id}>
+                    <div className = "flex flex-row" key={item.id}>
                     <img src = {item.img} 
                         className ="hidden md:block h-40 w-40 rounded-full mt-3 ml-10"
                     /> 
@@ -62,7 +62,7 @@ export default function Register() {
                 <div className ="border-1 border-gray-600 h-10 w-15 ml-7 pl-3 pt-1.5 text-gray-600 font-bold mt-30">Full</div></div>
                 <div>
                     {dessertItems.map((item) => (
-                <div className = "ml-5 flex flex-row hover:bg-[#c7a480] hover:w-180 hover:rounded-[20px] , pb-3" key = {item.id}>
+                <div className = "ml-5 flex flex-row " key = {item.id}>
                     <img src = {item.img}
                         className =" md:block h-40 w-40 rounded-full mt-3 ml-15"
                     ></img>
