@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-export default function Navbar() {
+export default function Navbar1() {
   const [ToggleMenu, setToggleMenu] = useState(false);
   const [TogglePages, setTogglePages] = useState(false);
   const router = useRouter();
@@ -30,7 +30,7 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              class="hidden md:block lucide lucide-phone-call-icon lucide-phone-call mt-1.5 md:mt-1  "
+              className="hidden md:block lucide lucide-phone-call-icon lucide-phone-call mt-1.5 md:mt-1  "
             >
               <path d="M13 2a9 9 0 0 1 9 9" />
               <path d="M13 6a5 5 0 0 1 5 5" />
@@ -47,7 +47,7 @@ export default function Navbar() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              class="lucide lucide-mail-icon lucide-mail w-5 h-5 md:w-7 md:h-7"
+              className="lucide lucide-mail-icon lucide-mail w-5 h-5 md:w-7 md:h-7"
             >
               <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -75,7 +75,7 @@ export default function Navbar() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                class="hidden md:block lucide lucide-languages-icon lucide-languages -ml-6 -mt-8"
+                className="hidden md:block lucide lucide-languages-icon lucide-languages -ml-6 -mt-8"
               >
                 <path d="m5 8 6 6" />
                 <path d="m4 14 6-6 2-3" />
@@ -97,7 +97,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            class="hidden md:block lucide lucide-facebook-icon lucide-facebook ml-10 mt-3"
+            className="hidden md:block lucide lucide-facebook-icon lucide-facebook ml-10 mt-3"
           >
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg>
@@ -111,7 +111,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            class="hidden md:block lucide lucide-instagram-icon lucide-instagram ml-4 mt-3"
+            className="hidden md:block lucide lucide-instagram-icon lucide-instagram ml-4 mt-3"
           >
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -127,7 +127,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            class="hidden md:block lucide lucide-twitter-icon lucide-twitter ml-4 mt-3"
+            className="hidden md:block lucide lucide-twitter-icon lucide-twitter ml-4 mt-3"
           >
             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
           </svg>
@@ -141,7 +141,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            class="hidden md:block lucide lucide-youtube-icon lucide-youtube ml-4 mt-3"
+            className="hidden md:block lucide lucide-youtube-icon lucide-youtube ml-4 mt-3"
           >
             <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
             <path d="m10 15 5-3-5-3z" />
@@ -168,7 +168,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            class="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"
+            className="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"
           >
             <path d="M4 5h16" />
             <path d="M4 12h16" />

@@ -1,3 +1,4 @@
+"use client";
 import Footer from "../components/footer";
 import Masterchef from "../components/masterchef";
 import Navbar from "../components/navbar";
@@ -15,6 +16,7 @@ export default function Chef() {
         {" "}
         <Footer />
       </div>
+      
     </div>
   );
 }

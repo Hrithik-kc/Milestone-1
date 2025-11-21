@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar1";
 import Footer1 from "../components/Footer1";
 import { useRouter } from "next/navigation";
+import Navbar1 from "../components/Navbar1";
 
 export default function Register() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function Register() {
         <div className="absolute  mt-70 ml-40 md:mt-110 md:ml-130 font-semibold font-serif text-white md:text-[50px] flex justify-center items-center ">
           Login Now
         </div>
-        <Navbar />
+        <Navbar1 />
       </div>
       {/*register main*/}
       <div className="h-250 md:h-[80%] w-110 md:w-[83%] shadow-xl/20 rounded-[5px] bg-white md:ml-30 mt-10 mb-10 flex flex-col md:flex-row">

@@ -4,6 +4,8 @@ import Select from "./components/select";
 import Footer from "./components/footer";
 import Masterchef from "./components/masterchef";
 import { navigate } from "next/dist/client/components/segment-cache-impl/navigation";
+import Card from "./components/item";
+import Dish from "./components/dishes";
 
 export default function Home() {
   const router = useRouter();
@@ -159,7 +161,6 @@ export default function Home() {
             </select>
             <input
               className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              
               type="Date"
             ></input>
             <input
@@ -183,29 +184,48 @@ export default function Home() {
               ></img>
               Our Popular Category
               <div className=" md:flex md:flex-row flex flex-col gap-8 ml-16">
-                <div className="bg-amber-800 h-10 w-10 rounded-full gap-8 hidden md:block text-amber-50 pl-2.5" >&#60;
+                <div className="bg-amber-800 h-10 w-10 rounded-full gap-8 hidden md:block text-amber-50 pl-2.5">
+                  &#60;
                 </div>
-                <div className="bg-amber-800 h-10 w-10 rounded-full hidden md:block text-amber-50 pl-2.5">&#62;</div>
+                <div className="bg-amber-800 h-10 w-10 rounded-full hidden md:block text-amber-50 pl-2.5">
+                  &#62;
+                </div>
               </div>
             </div>
             <div className="md:flex md:flex-row flex flex-col ">
-              <div className="bg-black md:h-60 h-130 md:w-50 w-100 rounded-2xl ml-30 mt-8  ">
+              <div className="bg-black md:h-60 h-130 md:w-50 w-100 rounded-2xl ml-30 mt-8  transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F25.jpg&w=828&q=75"
                   className="h-130 w-100 rounded-2xl md:h-60 md:w-auto"
                 ></img>
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold">
+                  Chicken Alfredo
+                </h1>
+                <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
+                  Main Dishes
+                </h1>
               </div>
-              <div className="bg-black h-60 w-50 rounded-2xl md:ml-8 mt-8 hidden md:block ">
+              <div className="bg-black h-60 w-50 rounded-2xl md:ml-8 mt-8 hidden md:block transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5 ">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F28.jpg&w=828&q=75"
                   className="h-100 w-auto rounded-2xl md:h-60"
                 ></img>
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold">
+                  Hot Chocolates
+                </h1>
+                <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
+                  Beverages
+                </h1>
               </div>
-              <div className="bg-black h-60 w-50 rounded-2xl ml-8 mt-8 hidden md:block">
+              <div className="bg-black h-60 w-50 rounded-2xl ml-8 mt-8 hidden md:block transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F27.jpg&w=828&q=75"
                   className="h-60 w-auto rounded-2xl hidden md:block"
                 ></img>
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold">Salmon Fry</h1>
+                <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
+                  Sea food
+                </h1>
               </div>
               <button className="bg-amber-800 h-10 w-10 rounded-full gap-8 block md:hidden"></button>
             </div>
@@ -274,8 +294,6 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-amber-600 md:h-160 md:w-280 h-250 w-100  mt-32 justify-self-center rounded-4xl md:flex md:flex-row flex flex-col">
-          {/* <img src="https://png.pngtree.com/thumb_back/fh260/background/20220705/pngtree-decent-color-brush-background-image_1416414.jpg" className="h-158 w-277 justify- rounded-4xl ml-2 pt-2"></img> */}
-
           <div>
             <div className="md:flex md:flex-row flex flex-col">
               <div>
@@ -341,7 +359,7 @@ export default function Home() {
         <div className="md:text-5xl text-4xl text-black font-semibold justify-self-center mt-6">
           Our Special Menu
         </div>
-        <div className="md:flex md:flex-row flex flex-col border border-amber-800 md:h-24 h-80 w-100 rounded-lg md:w-2xl justify-self-center justify-between  mt-14">
+        {/* <div className="md:flex md:flex-row flex flex-col border border-amber-800 md:h-24 h-80 w-100 rounded-lg md:w-2xl justify-self-center justify-between  mt-14">
           <button className="bg-amber-800 hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg md:ml-2 ml-9 mt-4 font-semibold">
             MAIN DISHES
           </button>
@@ -354,8 +372,10 @@ export default function Home() {
           <button className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg mr-2 md:ml-0 ml-9 mt-4 font-semibold md:mb-0 mb-2">
             BEVERAGES
           </button>
-        </div>
-        <div className="bg-amber-300 md:w-6xl w-100  h-250 md:h-120 justify-self-center mt-16"></div>
+        </div> */}
+        {/* <div className="bg-amber-300 md:w-6xl w-100  h-250 md:h-120 justify-self-center mt-16"></div> */}
+        <Dish/>
+
         <div className="md:h-160 h-280 md:w-280 w-100 justify-self-center mt-36 rounded-3xl bg-gray-900">
           <div className="md:flex md:flex-row flex flex-col  md:pt-28 pt-18 justify-around">
             <div>
