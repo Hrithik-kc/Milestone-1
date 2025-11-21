@@ -359,21 +359,7 @@ export default function Home() {
         <div className="md:text-5xl text-4xl text-black font-semibold justify-self-center mt-6">
           Our Special Menu
         </div>
-        {/* <div className="md:flex md:flex-row flex flex-col border border-amber-800 md:h-24 h-80 w-100 rounded-lg md:w-2xl justify-self-center justify-between  mt-14">
-          <button className="bg-amber-800 hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg md:ml-2 ml-9 mt-4 font-semibold">
-            MAIN DISHES
-          </button>
-          <button className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold">
-            DESSERTS
-          </button>
-          <button className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold">
-            SEA FOOD
-          </button>
-          <button className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg mr-2 md:ml-0 ml-9 mt-4 font-semibold md:mb-0 mb-2">
-            BEVERAGES
-          </button>
-        </div> */}
-        {/* <div className="bg-amber-300 md:w-6xl w-100  h-250 md:h-120 justify-self-center mt-16"></div> */}
+       
         <Dish/>
 
         <div className="md:h-160 h-280 md:w-280 w-100 justify-self-center mt-36 rounded-3xl bg-gray-900">
