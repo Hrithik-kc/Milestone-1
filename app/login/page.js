@@ -13,7 +13,7 @@ export default function Register() {
                   <Navbar/>
               </div>
           {/*register main*/}
-          <div className = "h-250 md:h-[80%] w-110 md:w-[83%] shadow-xl/20 rounded-[5px] bg-white md:ml-30 mt-10 mb-10 flex flex-col md:flex-row">
+          <div className = "h-250 md:h-[80%] w-100 md:w-[83%] shadow-xl/20 rounded-[5px] bg-white md:ml-30 mt-10 mb-10 flex flex-col md:flex-row">
               <img src = "https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F14.jpg&w=3840&q=75" alt="bg"
               className = "w-100 md:w-[50%] h-90 ml-4 md:ml-0 md:h-130 rounded-[20px]"
               ></img>

@@ -1,3 +1,4 @@
+"use client";
 import Footer from "../components/footer";
 import Masterchef from "../components/masterchef";
 import Navbar from "../components/navbar";
@@ -12,9 +13,10 @@ export default function Chef() {
         <div className="bg-gray-200 h-54"></div>
       </div>
       <div className=" md:-mt-65 md:pt-0 pt-5 mt-0 ">
-        {" "}
+        
         <Footer />
       </div>
+      
     </div>
   );
 }
