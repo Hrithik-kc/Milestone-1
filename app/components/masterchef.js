@@ -59,7 +59,7 @@ export default function Masterchef(){
             </div>
           </div>
         </div>
-        <div className="h-12 w-2xl bg-gray-200 mt-24"></div>
+        <div className="h-12 w-none md:w-2xl bg-gray-200 mt-24"></div>
       </div>
         </div>
     )
