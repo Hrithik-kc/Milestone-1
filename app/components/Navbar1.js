@@ -157,7 +157,7 @@ export default function Navbar1() {
         />
 
         <div className="grid grid-col-4 gap-2 absolute top-40 border-b-1 border-gray-500 w-[100%]">
-          {/* <button onClick={()}> */}
+        
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

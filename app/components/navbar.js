@@ -20,7 +20,7 @@ export default function Navbar(props) {
       </div>
       <div>
         <img
-          src="https://b.zmtcdn.com/data/pictures/chains/6/18208896/855c9047d1ed6fbec59c8ee02183417c.jpg?fit=around|750:500&crop=750:500;*,*"
+          src="https://i.pinimg.com/1200x/70/83/0d/70830dba2119b6d55605efefe8e95e87.jpg"
           className="h-140 w-screen"
         ></img>
         <div className="flex flex-row justify-around -mt-136 font-semibold ">
@@ -51,11 +51,11 @@ export default function Navbar(props) {
               router.push(e.target.value);
             }}
           >
-            <option className=" text-black font-semibold">Home</option>
-            <option value="/home1" className=" text-black font-semibold">
+            <option value="/" className=" text-black font-semibold">Home</option>
+            <option value="/" className=" text-black font-semibold">
               Home1
             </option>
-            <option value="/home2" className=" text-black font-semibold">
+            <option value="/" className=" text-black font-semibold">
               Home2
             </option>
           </select>
@@ -123,12 +123,12 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
-      <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-36">
+      <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-24">
         {props.tittle}
       </div>
       <div className="flex flex-row justify-center ">
-        <div className=" text-2xl text-black font-semibold mt-6">{props.nav}</div>
-        <div className="text-2xl text-black font-semibold  mt-6">{props.current}</div>
+        <div className=" text-3xl text-black font-bold mt-6">{props.nav}</div>
+        <div className="text-3xl text-black font-bold  mt-6">{props.current}</div>
       </div>
     </div>
   );
