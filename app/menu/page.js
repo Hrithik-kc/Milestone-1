@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar1";
 import Footer from "../components/Footer1";
 import {breakfastItems, dessertItems} from "../components/Menu";
 export default function Register() {
-  return  <div className ="bg-white w-screen dark:bg-black">
+  return  <div className ="bg-white md:w w-screen dark:bg-black">
               <div>
                 <Navbar/>
                 <div className = "absolute -mt-20 md:-mt-40 justify-self-center  font-normal font-serif text-white text-[30px] md:text-[50px] flex justify-center items-center ">
