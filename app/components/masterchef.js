@@ -1,8 +1,8 @@
-import React from "react"
-export default function Masterchef(){
-    return(
-        <div>
-             <div className="bg-gray-200 w-screen ">
+import React from "react";
+export default function Masterchef() {
+  return (
+    <div>
+      <div className="bg-gray-200 w-screen ">
         <div className="text-amber-800 text-2xl font-medium justify-self-center pt-16">
           MASTER CHEFS
         </div>
@@ -61,6 +61,6 @@ export default function Masterchef(){
         </div>
         <div className="h-12 w-none md:w-2xl bg-gray-200 mt-24"></div>
       </div>
-        </div>
-    )
+    </div>
+  );
 }

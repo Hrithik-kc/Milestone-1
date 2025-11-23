@@ -23,7 +23,7 @@ export default function Navbar(props) {
       </div>
       <div>
         <img
-          src="https://i.pinimg.com/1200x/70/83/0d/70830dba2119b6d55605efefe8e95e87.jpg"
+          src={props.img}
           className="h-140 w-screen"
         ></img>
         <div className="flex flex-row justify-around -mt-136 font-semibold ">
@@ -32,18 +32,18 @@ export default function Navbar(props) {
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block"
             ></img>
-            <div className="hidden sm:block"> Phone:+919876534567</div>
+            <div className="hidden sm:block text-white"> Phone:+919876534567</div>
           </div>
           <div className="flex flex-row ">
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block "
             ></img>
-            <div className="hidden sm:block">Email:hrithikkc@gmail.com</div>
+            <div className="hidden sm:block light text-white">Email:hrithikkc@gmail.com</div>
           </div>
-          <div className=" hidden sm:block">Location:Sahyadri Campuse</div>
+          <div className=" hidden sm:block text-white">Location:Sahyadri Campuse</div>
         </div>
-        <div className="mb-6 hidden sm:block">
+        <div className="mb-6 hidden sm:block text-white">
           ________________________________________________________________________________________________________________________________________________________
         </div>
         <button
@@ -105,7 +105,7 @@ export default function Navbar(props) {
         )}
         <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -122,7 +122,7 @@ export default function Navbar(props) {
           </select>
           <Select op1="Pages" op2="Login" op3="Resigter" />
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -141,7 +141,7 @@ export default function Navbar(props) {
           ></img>
 
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -157,7 +157,7 @@ export default function Navbar(props) {
             </option>
           </select>
           <select
-            className="hidden sm:block h-4 w-20 "
+            className="hidden sm:block h-4 w-20 text-white "
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -185,11 +185,11 @@ export default function Navbar(props) {
         </div>
       </div>
 
-      <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-24">
+      <div className=" md:text-7xl text-3xl font-semibold justify-self-center mt-20 text-white">
         {props.tittle}
       </div>
       <div className="flex flex-row justify-center ">
-        <div className=" text-3xl text-black font-bold mt-6">{props.nav}</div>
+        <div className=" text-3xl text-black font-bold mt-6 ">{props.nav}</div>
         <div className="text-3xl text-black font-bold  mt-6">
           {props.current}
         </div>

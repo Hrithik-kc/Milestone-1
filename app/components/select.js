@@ -7,12 +7,12 @@ const Select = (props) => {
   return (
     <div>
       <select
-        className="hidden sm:block "
+        className="hidden sm:block text-white "
         onChange={(e) => {
           router.push(e.target.value);
         }}
       >
-        <option className="mx-9" >
+        <option className="mx-9 " >
           {props.op1}
         </option>
         <option className=" text-black font-semibold" value="/login">
