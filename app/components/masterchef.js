@@ -14,7 +14,7 @@ export default function Masterchef() {
             <div className="border-3 border-gray-500 h-80 w-80  justify-items-center pt-4.5 rounded-full">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Xx9XhbkiDGC5FaOpzIcGhkRh6nh3FotVrA&s"
-                className="h-70 w-70 rounded-full"
+                className="h-70 w-70 rounded-full "
               ></img>
             </div>
             <div className="bg-amber-700 h-20 w-xs rounded-3xl -mt-28">

@@ -13,11 +13,11 @@ export default function Home() {
     <div>
       <div>
         <Navbar img="https://cdn.pixabay.com/video/2024/02/25/201947-916877801_tiny.jpg" tittle="Best Resturant"/>
-        <div className="bg-amber-600 h-2 w-screen mt-66"></div>
+        <div className="bg-amber-600 h-2 w-screen mt-35"></div>
       </div>
       <div className="bg-gray-100 w-screen">
         <div className=" md:flex md:flex-row flex flex-col md:ml-0 -ml-27 ">
-          <div className="bg-white h-125 w-96 ml-32 rounded-3xl mt-10 shadow-md">
+          <div className="bg-white h-125 w-96 ml-32 rounded-3xl md:mt-10 mt-60 shadow-md">
             <div className="bg-amber-700 h-20 w-20 rounded-full ml-11 -mt-8">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwt9XWa9NtaQTkc4On4Y-iOyWsKby8kiMHZxypYnPtLeOb3gKJW-BF7RAXzBKPnW6HxRQ&usqp=CAU"
@@ -73,10 +73,10 @@ export default function Home() {
               </div>
             </div>
             <div className="md:flex md:flex-row flex flex-col ">
-              <div className="bg-black md:h-60 h-130 md:w-50 w-100 rounded-2xl ml-30 mt-8  transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5">
+              <div className="bg-black md:h-60 h-130 md:w-50 w-100 rounded-2xl ml-30 mt-8 transition ease-in-out duration-300 hover:scale-105 ">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F25.jpg&w=828&q=75"
-                  className="h-130 w-100 rounded-2xl md:h-60 md:w-auto"
+                  className="h-130 w-100 rounded-2xl md:h-60 md:w-auto "
                 ></img>
                 <h1 className="text-xl -mt-12 mx-1.5 font-bold">
                   Chicken Alfredo
@@ -85,7 +85,7 @@ export default function Home() {
                   Main Dishes
                 </h1>
               </div>
-              <div className="bg-black h-60 w-50 rounded-2xl md:ml-8 mt-8 hidden md:block transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5 ">
+              <div className="bg-black h-60 w-50 rounded-2xl md:ml-8 mt-8 hidden md:block transition ease-in-out duration-300 hover:scale-105">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F28.jpg&w=828&q=75"
                   className="h-100 w-auto rounded-2xl md:h-60"
@@ -97,7 +97,7 @@ export default function Home() {
                   Beverages
                 </h1>
               </div>
-              <div className="bg-black h-60 w-50 rounded-2xl ml-8 mt-8 hidden md:block transform transition duration-600 hover:-translate-y-3 hover:-translate-x-0.5">
+              <div className="bg-black h-60 w-50 rounded-2xl ml-8 mt-8 hidden md:block transition ease-in-out duration-300 hover:scale-105">
                 <img
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F27.jpg&w=828&q=75"
                   className="h-60 w-auto rounded-2xl hidden md:block"
@@ -256,7 +256,7 @@ export default function Home() {
                 <div className="mt-2.5">Start your online</div>
                 <div className="mt-2.5">Order?</div>
               </div>
-              <div className="md:mt-10 mt-14 md:text-left text-center md:text-base text-lg">
+              <div className="md:mt-10 mt-14 md:text-left text-center md:text-base text-lg text-white">
                 <div className="md:mr-0 mr-4">
                   Bndulgence diminution so discovered mr apartments. Are off
                   under

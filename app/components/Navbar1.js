@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-export default function Navbar() {
+export default function Navbar1() {
   const [ToggleMenu, setToggleMenu] = useState(false);
   const [TogglePages, setTogglePages] = useState(false);
   const [Toggle_side, setToggle_side] = useState(false);
@@ -9,11 +9,11 @@ export default function Navbar() {
   return (
     <div className="w-screen md:w-screen">
       <div className=" w-[100%] md:w-[100%]">
-        <div className="w-screen h-7md:h-[40%] md:w-[100%] bg-gray-500 flex flex-row">
-          <div className="text-white font-bold text-[20px] pl-5 md:pl-10 pt-2 md:pt-3 block">
-            envato
+        <div className="w-screen h-7md:h-[40%] md:w-[100%] bg-gray-900 flex flex-row">
+          <div className=" text-amber-500  font-bold text-[20px] pl-5 md:pl-10 pt-2 md:pt-3 block">
+            Sahyadri
           </div>
-          <div className="mt-2 md:mt-3 ml-1 text-[20px] text-white">Market</div>
+          <div className="mt-2 md:mt-3 ml-1 text-[20px]  text-amber-500 font-bold ">Cafe</div>
           <button className="md:flex flex-auto bg-[#597A2E] font-bold text-[15px] text-white w-15 md:w-15 h-8  mt-2 mb-2  mr-98 md:mr-10 ml-50 md:ml-260 hover:bg-[#76AE11] pt-1 pl-2 pr-2 md:pr-0 md:pl-9.5 ">
             Buy
           </button>

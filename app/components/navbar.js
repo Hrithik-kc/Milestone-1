@@ -5,7 +5,6 @@ import Select from "../components/select";
 import { useRouter } from "next/navigation";
 export default function Navbar(props) {
   const router = useRouter();
-  const [Toggle_side, setToggle_side] = useState(false);
 
   return (
     <div>
@@ -22,90 +21,44 @@ export default function Navbar(props) {
         </button>
       </div>
       <div>
-        <img
-          src={props.img}
-          className="h-140 w-screen"
-        ></img>
+        <img src={props.img} className="h-140 w-screen"></img>
         <div className="flex flex-row justify-around -mt-136 font-semibold ">
           <div className="flex flex-row">
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block"
             ></img>
-            <div className="hidden sm:block text-white"> Phone:+919876534567</div>
+            <div className="hidden sm:block text-white">
+              {" "}
+              Phone:+919876534567
+            </div>
           </div>
           <div className="flex flex-row ">
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block "
             ></img>
-            <div className="hidden sm:block light text-white">Email:hrithikkc@gmail.com</div>
+            <div className="hidden sm:block light text-white">
+              Email:hrithikkc@gmail.com
+            </div>
           </div>
-          <div className=" hidden sm:block text-white">Location:Sahyadri Campuse</div>
+          <div className=" hidden sm:block text-white">
+            Location:Sahyadri Campuse
+          </div>
         </div>
         <div className="mb-6 hidden sm:block text-white">
           ________________________________________________________________________________________________________________________________________________________
         </div>
-        <button
-          onClick={() => {
-            setToggle_side(!Toggle_side);
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            class="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"
-          >
-            <path d="M4 5h16" />
-            <path d="M4 12h16" />
-            <path d="M4 19h16" />
-          </svg>
-        </button>
-        {Toggle_side && (
-          <div className="md:hidden rounded-r-[5px] h-[500px] w-[400px] absolute bg-gradient-to-r from-[#ececec] via-[#b5b5b5] to-[#929292] -mt-18">
-            <img
-              src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo.png&w=750&q=75"
-              className="h-25 w-30 pt-5 pl-5 "
-            ></img>
-            <div className="flex flex-col">
-              <button
-                onClick={() => router.push("../")}
-                className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
-              >
-                Home
-              </button>
-              <div className=" absolute mt-18 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
-              <button
-                onClick={() => router.push("../login")}
-                className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
-              >
-                Login
-              </button>
-              <div className=" absolute mt-35 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
-              <button
-                onClick={() => router.push("../menu")}
-                className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
-              >
-                Menu
-              </button>
-              <div className=" absolute mt-53 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
-              <button className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">
-                Blogs
-              </button>
-              <div className=" absolute mt-70 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
-            </div>
-          </div>
-        )}
         <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
+          <div className="flex flex-row">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_zccfkLU76yXCyG_B1d5Up-3X-ZrYYfuL-g&s"
+              className="h-5 w-7 -mt-3 -ml-3 block md:hidden "
+            ></img>
+            <Select op1="" op2="Login" op3="Register" op4="Menu" op5="Chef" />
+          </div>
           <select
-            className="hidden sm:block h-4 w-20 text-white"
+            className="hidden sm:block h-4 w-20 text-white rounded-2xl"
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -113,14 +66,29 @@ export default function Navbar(props) {
             <option value="/" className=" text-black font-semibold">
               Home
             </option>
-            <option value="/" className=" text-black font-semibold">
+            <option value="/" className=" text-black font-semibold rounded-2xl">
               Home1
             </option>
             <option value="/" className=" text-black font-semibold">
               Home2
             </option>
           </select>
-          <Select op1="Pages" op2="Login" op3="Resigter" />
+ <select
+            className="hidden sm:block h-4 w-20 text-white"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option value="/" className=" text-black font-semibold">
+              Pages
+            </option>
+            <option value="/login" className=" text-black font-semibold">
+              Login
+            </option>
+            <option value="/register" className=" text-black font-semibold">
+              Register
+            </option>
+          </select>
           <select
             className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
@@ -146,10 +114,10 @@ export default function Navbar(props) {
               router.push(e.target.value);
             }}
           >
-            <option value="/Blogs" className=" text-black font-semibold">
+            <option value="/blog" className=" text-black font-semibold">
               Blogs
             </option>
-            <option value="/Blogs" className=" text-black font-semibold">
+            <option value="/blog" className=" text-black font-semibold">
               Blogs Standard
             </option>
             <option value="/Blogs" className=" text-black font-semibold">
