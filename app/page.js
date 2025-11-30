@@ -5,6 +5,9 @@ import Footer from "./components/footer";
 import Masterchef from "./components/masterchef";
 import Dish from "./components/dishes";
 import Navbar from "./components/navbar";
+import Table from "./components/table";
+import Offer from "./components/offer";
+import Onlineorder from "./components/onlineorder";
 
 export default function Home() {
   const router = useRouter();
@@ -12,52 +15,17 @@ export default function Home() {
   return (
     <div>
       <div>
-        <Navbar img="https://cdn.pixabay.com/video/2024/02/25/201947-916877801_tiny.jpg" tittle="Best Resturant"/>
+        <Navbar
+          img="https://cdn.pixabay.com/video/2024/02/25/201947-916877801_tiny.jpg"
+          tittle="Best Resturant"
+        />
         <div className="bg-amber-600 h-2 w-screen mt-35"></div>
       </div>
-      <div className="bg-gray-100 w-screen">
+      <div className="bg-gray-100 w-screen dark:bg-gray-900">
         <div className=" md:flex md:flex-row flex flex-col md:ml-0 -ml-27 ">
-          <div className="bg-white h-125 w-96 ml-32 rounded-3xl md:mt-10 mt-60 shadow-md">
-            <div className="bg-amber-700 h-20 w-20 rounded-full ml-11 -mt-8">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwt9XWa9NtaQTkc4On4Y-iOyWsKby8kiMHZxypYnPtLeOb3gKJW-BF7RAXzBKPnW6HxRQ&usqp=CAU"
-                className="rounded-full h-15 w-19 justify-self-center pt-5"
-              ></img>
-            </div>
-            <div className="text-3xl text-black font-semibold ml-12 mt-10">
-              Book a Table
-            </div>
-            <input
-              className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              placeholder="Phone"
-            ></input>
-
-            <select className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400">
-              <option className=" text-black font-semibold">1 Person</option>
-              <option className=" text-black font-semibold">2 Person</option>
-              <option value="/Blogs" className=" text-black font-semibold">
-                3 Person
-              </option>
-            </select>
-            <input
-              className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              type="Date"
-            ></input>
-            <input
-              className="h-12 w-72 ml-12 rounded-lg border pl-4 mt-7 text-gray-600 border-gray-400"
-              placeholder="Time"
-            ></input>
-            <button
-              className="h-11 w-34 ml-26 mt-4 rounded-lg bg-amber-900 text-xl font-medium"
-              onClick={() => {
-                alert("The Table Is Booked");
-              }}
-            >
-              Book a Table
-            </button>
-          </div>
+          <Table />
           <div className="flex flex-col">
-            <div className="text-4xl font-semibold text-black flex flex-row ml-32 md:mt-40 mt-28">
+            <div className="text-4xl font-semibold text-black dark:text-white flex flex-row ml-32 md:mt-40 mt-28">
               <img
                 src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2Ffire.png&w=48&q=75"
                 className="h-12 w-auto"
@@ -78,7 +46,7 @@ export default function Home() {
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F25.jpg&w=828&q=75"
                   className="h-130 w-100 rounded-2xl md:h-60 md:w-auto "
                 ></img>
-                <h1 className="text-xl -mt-12 mx-1.5 font-bold">
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold text-white">
                   Chicken Alfredo
                 </h1>
                 <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
@@ -90,7 +58,7 @@ export default function Home() {
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F28.jpg&w=828&q=75"
                   className="h-100 w-auto rounded-2xl md:h-60"
                 ></img>
-                <h1 className="text-xl -mt-12 mx-1.5 font-bold">
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold text-white">
                   Hot Chocolates
                 </h1>
                 <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
@@ -102,8 +70,10 @@ export default function Home() {
                   src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fmenu%2F27.jpg&w=828&q=75"
                   className="h-60 w-auto rounded-2xl hidden md:block"
                 ></img>
-                <h1 className="text-xl -mt-12 mx-1.5 font-bold">Salmon Fry</h1>
-                <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400">
+                <h1 className="text-xl -mt-12 mx-1.5 font-bold text-white">
+                  Salmon Fry
+                </h1>
+                <h1 className="text-base -mt-12 mx-1.5 font-semibold text-amber-400 ">
                   Sea food
                 </h1>
               </div>
@@ -117,7 +87,7 @@ export default function Home() {
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F13.png&w=256&q=75"
               className="h-30 w-30"
             ></img>
-            <div className="text-2xl font-semibold text-black mt-5">
+            <div className="text-2xl font-semibold text-black dark:text-white mt-5">
               Quality Foods
             </div>
             <div className="text-gray-500 mt-5">
@@ -137,7 +107,7 @@ export default function Home() {
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F14.png&w=256&q=75"
               className="h-30 w-30"
             ></img>
-            <div className="text-2xl font-semibold text-black mt-5">
+            <div className="text-2xl font-semibold text-black dark:text-white mt-5">
               Fast Delivery
             </div>
             <div className="text-gray-500 mt-5">
@@ -157,7 +127,7 @@ export default function Home() {
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F15.png&w=256&q=75"
               className="h-30 w-30"
             ></img>
-            <div className="text-2xl font-semibold text-black mt-5">
+            <div className="text-2xl font-semibold text-black dark:text-white mt-5">
               Delicious Recipies
             </div>
             <div className="text-gray-500 mt-5">
@@ -173,117 +143,17 @@ export default function Home() {
             <div className="text-gray-500 mt-2.5">terminated.</div>
           </div>
         </div>
-        <div className="bg-amber-600 md:h-160 md:w-280 h-250 w-100  mt-32 justify-self-center rounded-4xl md:flex md:flex-row flex flex-col">
-          <div>
-            <div className="md:flex md:flex-row flex flex-col">
-              <div>
-                <img
-                  src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F1.png&w=640&q=75"
-                  className="h-80 w-80 md:ml-11 md:9 mt-4"
-                ></img>
-              </div>
-              <div>
-                <img
-                  src="https://t4.ftcdn.net/jpg/03/36/91/17/360_F_336911714_WdVI3MgN9AhyL2nvW2ZxwkYCXwDABWfY.jpg"
-                  className="h-32 w-32 rounded-full md:mt-13 -mt-15 md:ml-24 ml-38  "
-                ></img>
-              </div>
-            </div>
-            <div>
-              <img
-                src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F15.png&w=640&q=75"
-                className="h-70 w-70 ml-11 hidden md:block"
-              ></img>
-            </div>
-            <div>
-              <img
-                src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F12.png&w=640&q=75"
-                className="h-60 w-60 ml-88 -mt-90 hidden md:block"
-              ></img>
-            </div>
-          </div>
-          <div className="flex flex-col ml-14">
-            <div className="md:text-3xl text-2xl font-bold text-black  mt-10 md:mt-24">
-              Today Special Offer
-            </div>
-            <div className="md:text-6xl text-4xl font-semibold text-black mt-14">
-              Explore
-              <div>Irresistible</div>
-              <div>Promotions!</div>
-            </div>
-            <div className="mt-8 text-amber-950 font-medium ">
-              <div>
-                <div>
-                  Contrasted dissimilar get joy you instrument out reasonably.
-                </div>
-                <div>to zealously necessary.Again keeps at no meant stuff.</div>
-                <div>
-                  northward as difficult preserved daughters. Continued at up
-                </div>
-                <div>To perpetual do existence</div>
-              </div>
-            </div>
-            <button
-              className="bg-red-950 rounded-full h-13 hover:bg-black center mt-6 w-36 font-semibold"
-              onClick={() => {
-                router.push("/menu");
-              }}
-            >
-              Order Now
-            </button>
-          </div>
-        </div>
-        <div className="text-amber-900 font-semibold md:text-2xl  text-xl justify-self-center mt-24">
+        <Offer />
+        <div className="text-amber-900 font-semibold md:text-2xl dark:text-white text-xl justify-self-center mt-24">
           FOOD MENU
         </div>
-        <div className="md:text-5xl text-4xl text-black font-semibold justify-self-center mt-6">
+        <div className="md:text-5xl text-4xl text-black dark:text-white font-semibold justify-self-center mt-6">
           Our Special Menu
         </div>
 
         <Dish />
 
-        <div className="md:h-160 h-280 md:w-280 w-100 justify-self-center mt-36 rounded-3xl bg-gray-900">
-          <div className="md:flex md:flex-row flex flex-col  md:pt-28 pt-18 justify-around">
-            <div>
-              <img
-                src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fillustration%2F16.png&w=1080&q=75"
-                className="md:h-110 h-90 md:ml-10 ml-6 w-auto"
-              ></img>
-            </div>
-            <div className="flex flex-col">
-              <div className="font-semibold md:text-5xl text-4xl md:text-left text-center text-white ">
-                <div className="md:mt-0 mt-5">Are you Ready to </div>
-                <div className="mt-2.5">Start your online</div>
-                <div className="mt-2.5">Order?</div>
-              </div>
-              <div className="md:mt-10 mt-14 md:text-left text-center md:text-base text-lg text-white">
-                <div className="md:mr-0 mr-4">
-                  Bndulgence diminution so discovered mr apartments. Are off
-                  under
-                </div>
-                <div className="mt-3.5 md:mr-0 mr-4">
-                  folly death wrote cause her way spite. Plan upon yet way get
-                  cold spot
-                </div>
-                <div className="mt-3.5 md:mr-0 mr-4 md:ml-0 ml-2.5">
-                  its week. Almost do am or limits hearts. Resolve parties but
-                  why she
-                </div>
-                <div className="mt-3.5 md:mr-0 mr-4">
-                  shewing. She sang know now
-                </div>
-              </div>
-              <div className="md:flex md:flex-row flex flex-col  md:gap-7 md:ml-0 ml-28 ">
-                <button className="bg-white h-13 w-44 mt-15 text-lg text-black font-semibold rounded-full  hover:bg-lime-800">
-                  App Store
-                </button>
-                <button className="bg-white h-13 w-44 md:mt-15 mt-8 text-lg text-black font-semibold rounded-full  hover:bg-lime-800">
-                  Play Store
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Onlineorder />
         <div className="md:flex md:flex-row flex flex-col justify-center md:justify-center-none">
           <iframe
             className="md:h-100 h-120 md:rounded-3xl rounded-2xl ml-3 md:w-2xl w-100 md:mt-50 mt-28"
@@ -292,18 +162,18 @@ export default function Home() {
             allow="autoplay "
             allowFullScreen
           ></iframe>
-          <div className=" bg-white shadow-md md:w-xl w-100 md:h-150 h-160 rounded-4xl md:ml-11 ml-3 md:mt-35 mt-20">
+          <div className=" bg-white dark:bg-gray-500 shadow-md md:w-xl w-100 md:h-150 h-160 rounded-4xl md:ml-11 ml-3 md:mt-35 mt-20">
             <div className="flex flex-col">
-              <div className="text-3xl font-semibold text-indigo-950 ml-10 mt-18">
+              <div className="text-3xl font-semibold text-indigo-950 dark:text-white ml-10 mt-18">
                 Opening Hours
               </div>
-              <div className="text-amber-950 font-medium ml-10 mt-4">
+              <div className="text-amber-950 font-medium dark:text-white ml-10 mt-4">
                 <div>
                   A relaxing and pleasant atmosphere, good jazz, dinner, and{" "}
                 </div>
                 <div>cocktails. The Patio Time Bar opens in the center..</div>
               </div>
-              <div className="md:text-xl text-lg text-black font-semibold ml-10 mt-9">
+              <div className="md:text-xl text-lg text-black dark:text-white font-semibold ml-10 mt-9">
                 <div>Sunday To Tuesday ------- 9:00 am to 10:00 pm</div>
                 <div className="mt-3">
                   Wednesday To Thursday ----- 10:00 am to 9:00 pm
@@ -319,9 +189,11 @@ export default function Home() {
                     className="justify-self-center mt-4 "
                   ></img>
                 </div>
-                <div className="flex flex-col text-black mt-18 ml-5">
+                <div className="flex flex-col text-black dark:text-white mt-18 ml-5">
                   <div className="text-lg ">Call Any Time</div>
-                  <div className="text-3xl font-semibold">+91 6360711517</div>
+                  <div className="text-3xl dark:text-white font-semibold">
+                    +91 6360711517
+                  </div>
                 </div>
               </div>
             </div>
@@ -334,12 +206,12 @@ export default function Home() {
       </div>
       <Masterchef />
 
-      <div className="bg-gray-100 w-screen">
+      <div className="bg-gray-100 w-screen dark:bg-gray-900">
         <div>
-          <div className="pt-24 justify-self-center text-2xl text-amber-800 font-semibold">
+          <div className="pt-24 justify-self-center text-2xl text-amber-800 font-semibold dark:text-white">
             News & Blogs
           </div>
-          <div className="md:text-4xl font-bold text-4xl md:mx-0 mx-16 md:text-start text-center text-black mt-8 justify-self-center">
+          <div className="md:text-4xl font-bold text-4xl md:mx-0 mx-16 md:text-start text-center dark:text-white text-black mt-8 justify-self-center">
             Our Latest News & Blog
           </div>
           <div className="md:flex md:flex-row flex flex-col justify-center gap-10 mt-12">
@@ -353,8 +225,8 @@ export default function Home() {
             ></img>
           </div>
           <div className="md:flex md:flex-row flex flex-col gap-20 justify-center -mt-18">
-            <div className="bg-amber-100 md:h-70 h-70 md:w-lg w-100 md:mt-0 -mt-140 md:ml-0 ml-3 shadow-md">
-              <div className="bg-amber-800 w-20 h-20 md:ml-96 ml-72 -mt-9 text-2xl font-bold justify-self-center pl-4 ">
+            <div className="bg-amber-100 dark:bg-gray-300 md:h-70 h-70 md:w-lg w-100 md:mt-0 -mt-140 md:ml-0 ml-3 shadow-md">
+              <div className="bg-amber-800 w-20 h-20 md:ml-96 ml-72 -mt-9 text-white text-2xl font-bold justify-self-center pl-4 ">
                 31 OCT
               </div>
               <div className="text-black ">
@@ -367,8 +239,8 @@ export default function Home() {
                 <button className="mt-5 ml-8">READ MORE</button>
               </div>
             </div>
-            <div className="bg-amber-100 md:h-70 h-70 md:w-lg w-100 md:mt-0 mt-68 shadow-md md:ml-0 ml-3">
-              <div className="bg-amber-800 w-20 h-20 md:ml-96 ml-72 -mt-9 text-2xl font-bold justify-self-center pl-4">
+            <div className="bg-amber-100 md:h-70  dark:bg-gray-300  h-70 md:w-lg w-100 md:mt-0 mt-68 shadow-md md:ml-0 ml-3">
+              <div className="bg-amber-800 w-20 h-20 md:ml-96 ml-72 -mt-9 text-2xl text-white font-bold justify-self-center pl-4">
                 24 DEC
               </div>
               <div className="text-black">
