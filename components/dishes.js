@@ -262,25 +262,25 @@ export default function Dish() {
     <div>
       <div className="md:flex md:flex-row flex flex-col border border-amber-800 md:h-24 h-80 w-100 rounded-lg md:w-2xl justify-self-center justify-between  mt-14">
         <button
-          className="bg-amber-800 hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg md:ml-2 ml-9 mt-4 font-semibold"
+          className="bg-amber-800 hover:bg-blue-300 text-white hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg md:ml-2 ml-9 mt-4 font-semibold"
           onClick={() => setmenu("main")}
         >
           MAIN DISHES
         </button>
         <button
-          className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold"
+          className="bg-amber-800  hover:bg-blue-300 text-white hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold"
           onClick={() => setmenu("dess")}
         >
           DESSERTS
         </button>
         <button
-          className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold"
+          className="bg-amber-800  hover:bg-blue-300 text-white hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg  mt-4 md:ml-0 ml-9 font-semibold"
           onClick={() => setmenu("sea")}
         >
           SEA FOOD
         </button>
         <button
-          className="bg-amber-800  hover:bg-blue-300 hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg mr-2 md:ml-0 ml-9 mt-4 font-semibold md:mb-0 mb-2"
+          className="bg-amber-800  hover:bg-blue-300 text-white hover:text-black md:h-16 h-20 md:w-36 w-80 rounded-lg mr-2 md:ml-0 ml-9 mt-4 font-semibold md:mb-0 mb-2"
           onClick={() => setmenu("bev")}
         >
           BEVERAGES

@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "../components/Navbar1";
 import Footer1 from "../components/Footer1";
 import { useRouter } from "next/navigation";
 import Navbar1 from "../components/Navbar1";
@@ -15,14 +14,14 @@ export default function Register() {
         <Navbar1 />
       </div>
       {/*register main*/}
-      <div className="h-250 md:h-[80%] w-110 md:w-[83%] shadow-xl/20 rounded-[5px] bg-white md:ml-30 mt-10 mb-10 flex flex-col md:flex-row">
+      <div className="h-250 md:h-[80%] w-100 md:w-[83%] shadow-xl/20 rounded-[5px] bg-white md:ml-30 mt-10 mb-10 flex flex-col md:flex-row">
         <img
           src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fthumb%2F14.jpg&w=3840&q=75"
           alt="bg"
-          className="w-100 md:w-[50%] h-90 ml-4 md:ml-0 md:h-170 rounded-[20px]"
+          className="w-100 md:w-[50%] h-90 ml-4 md:ml-0 md:h-130 rounded-[20px]"
         ></img>
         <div className="flex flex-col ">
-          <div className="font-serif text-[30px] pl-5 md:pl-20 pt-15 text-[#AA6C39] font-medium">
+          <div className="font-serif text-[30px] pl-5 md:pl-20 pt-15 md:pt-5 text-[#AA6C39] font-medium">
             WELCOME BACK
           </div>
           <div className="text-[20px] pl-5 md:pl-20  text-gray-500 -">

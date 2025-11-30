@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar1";
 import Footer from "../components/Footer1";
 import {breakfastItems, dessertItems} from "../components/Menu";
-export default function Register() {
-  return  <div className ="bg-white w-screen dark:bg-black">
+import Navbar1 from "../components/Navbar1";
+export default function Menu() {
+  return  <div className ="bg-white md:w w-screen dark:bg-black">
               <div>
-                <Navbar/>
+                <Navbar1/>
                 <div className = "absolute -mt-20 md:-mt-40 justify-self-center  font-normal font-serif text-white text-[30px] md:text-[50px] flex justify-center items-center ">
                     Food Menu
                 </div>
@@ -30,7 +30,7 @@ export default function Register() {
                 <div className ="border-1 border-gray-600 h-10 w-15 ml-7 pl-3 pt-1.5 text-gray-600 font-bold mt-130 md:mt-30">Full</div></div>
                 <div>
                     {breakfastItems.map((item) => (
-                    <div className = "flex flex-row hover:bg-[#c7a480] hover:w-170 hover:rounded-[20px] , pb-3" key={item.id}>
+                    <div className = "flex flex-row" key={item.id}>
                     <img src = {item.img} 
                         className ="hidden md:block h-40 w-40 rounded-full mt-3 ml-10"
                     /> 
@@ -62,7 +62,7 @@ export default function Register() {
                 <div className ="border-1 border-gray-600 h-10 w-15 ml-7 pl-3 pt-1.5 text-gray-600 font-bold mt-30">Full</div></div>
                 <div>
                     {dessertItems.map((item) => (
-                <div className = "ml-5 flex flex-row hover:bg-[#c7a480] hover:w-180 hover:rounded-[20px] , pb-3" key = {item.id}>
+                <div className = "ml-5 flex flex-row " key = {item.id}>
                     <img src = {item.img}
                         className =" md:block h-40 w-40 rounded-full mt-3 ml-15"
                     ></img>

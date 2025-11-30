@@ -1,9 +1,11 @@
-"use client"
+"use client";
 import React from "react";
+import { useState } from "react";
 import Select from "../components/select";
 import { useRouter } from "next/navigation";
 export default function Navbar(props) {
-   const router = useRouter();
+  const router = useRouter();
+
   return (
     <div>
       <div className="bg-gray-900 h-13 w-full justify-between flex flex-row  ">
@@ -19,49 +21,76 @@ export default function Navbar(props) {
         </button>
       </div>
       <div>
-        <img
-          src="https://b.zmtcdn.com/data/pictures/chains/6/18208896/855c9047d1ed6fbec59c8ee02183417c.jpg?fit=around|750:500&crop=750:500;*,*"
-          className="h-140 w-screen"
-        ></img>
+        <img src={props.img} className="h-140 w-screen"></img>
         <div className="flex flex-row justify-around -mt-136 font-semibold ">
           <div className="flex flex-row">
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block"
             ></img>
-            <div className="hidden sm:block"> Phone:+919876534567</div>
+            <div className="hidden sm:block text-white">
+              {" "}
+              Phone:+919876534567
+            </div>
           </div>
           <div className="flex flex-row ">
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Ficon%2F6.png&w=64&q=75"
               className="h-6 mx-1.5 w-auto hidden sm:block "
             ></img>
-            <div className="hidden sm:block">Email:hrithikkc@gmail.com</div>
+            <div className="hidden sm:block light text-white">
+              Email:hrithikkc@gmail.com
+            </div>
           </div>
-          <div className=" hidden sm:block">Location:Sahyadri Campuse</div>
+          <div className=" hidden sm:block text-white">
+            Location:Sahyadri Campuse
+          </div>
         </div>
-        <div className="mb-6 hidden sm:block">
+        <div className="mb-6 hidden sm:block text-white">
           ________________________________________________________________________________________________________________________________________________________
         </div>
         <div className="flex flex-row m-4 justify-around font-bold cursor-pointer ">
-          {/* <Select op1="Home" op2="Home1" op3="Home2" /> */}
+          <div className="flex flex-row">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_zccfkLU76yXCyG_B1d5Up-3X-ZrYYfuL-g&s"
+              className="h-5 w-7 -mt-3 -ml-3 block md:hidden "
+            ></img>
+            <Select op1="" op2="Login" op3="Register" op4="Menu" op5="Chef" />
+          </div>
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white rounded-2xl"
             onChange={(e) => {
               router.push(e.target.value);
             }}
           >
-            <option className=" text-black font-semibold">Home</option>
-            <option value="/home1" className=" text-black font-semibold">
+            <option value="/" className=" text-black font-semibold">
+              Home
+            </option>
+            <option value="/" className=" text-black font-semibold rounded-2xl">
               Home1
             </option>
-            <option value="/home2" className=" text-black font-semibold">
+            <option value="/" className=" text-black font-semibold">
               Home2
             </option>
           </select>
-          <Select op1="Pages" op2="Login" op3="Resigter" />
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white"
+            onChange={(e) => {
+              router.push(e.target.value);
+            }}
+          >
+            <option value="/" className=" text-black font-semibold">
+              Pages
+            </option>
+            <option value="/login" className=" text-black font-semibold">
+              Login
+            </option>
+            <option value="/register" className=" text-black font-semibold">
+              Register
+            </option>
+          </select>
+          <select
+            className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -80,15 +109,15 @@ export default function Navbar(props) {
           ></img>
 
           <select
-            className="hidden sm:block h-4 w-20"
+            className="hidden sm:block h-4 w-20 text-white"
             onChange={(e) => {
               router.push(e.target.value);
             }}
           >
-            <option value="/Blogs" className=" text-black font-semibold">
+            <option value="/blog" className=" text-black font-semibold">
               Blogs
             </option>
-            <option value="/Blogs" className=" text-black font-semibold">
+            <option value="/blog" className=" text-black font-semibold">
               Blogs Standard
             </option>
             <option value="/Blogs" className=" text-black font-semibold">
@@ -96,7 +125,7 @@ export default function Navbar(props) {
             </option>
           </select>
           <select
-            className="hidden sm:block h-4 w-20 "
+            className="hidden sm:block h-4 w-20 text-white "
             onChange={(e) => {
               router.push(e.target.value);
             }}
@@ -123,12 +152,15 @@ export default function Navbar(props) {
           </button>
         </div>
       </div>
-      <div className=" md:text-6xl text-3xl font-semibold justify-self-center mt-36">
+
+      <div className=" md:text-7xl text-3xl font-semibold justify-self-center mt-20 text-white">
         {props.tittle}
       </div>
       <div className="flex flex-row justify-center ">
-        <div className=" text-2xl text-black font-semibold mt-6">{props.nav}</div>
-        <div className="text-2xl text-black font-semibold  mt-6">{props.current}</div>
+        <div className=" text-3xl text-black font-bold mt-6 ">{props.nav}</div>
+        <div className="text-3xl text-black font-bold  mt-6">
+          {props.current}
+        </div>
       </div>
     </div>
   );

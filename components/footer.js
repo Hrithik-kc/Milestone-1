@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div>
       <div className="pt-16 md:mt-100 mt-270 "></div>
-      <div className="bg-gray-900 md:h-90 h-90 md:w-screen md:ml-0 md-2 w-100 md:flex md:flex-row flex flex-col md:justify-between  ml-3">
+      <div className="bg-gray-900 dark:bg-gray-950 md:h-90 h-90 md:w-screen md:ml-0 md-2 w-100 md:flex md:flex-row flex flex-col md:justify-between  ml-3">
         <img
           src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Fshape%2F9.png&w=640&q=75"
           className="h-90 w-98 pt-9 hidden md:block opacity-45"

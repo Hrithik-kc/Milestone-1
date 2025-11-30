@@ -1,12 +1,12 @@
-import React from "react"
-export default function Masterchef(){
-    return(
-        <div>
-             <div className="bg-gray-200 w-screen ">
-        <div className="text-amber-800 text-2xl font-medium justify-self-center pt-16">
+import React from "react";
+export default function Masterchef() {
+  return (
+    <div>
+      <div className="bg-gray-200 w-screen dark:bg-gray-950 ">
+        <div className="text-amber-800 text-2xl font-medium justify-self-center dark:text-white pt-16">
           MASTER CHEFS
         </div>
-        <div className="font-semibold text-black md:text-5xl text-4xl mt-8 justify-self-center">
+        <div className="font-semibold text-black md:text-5xl text-4xl dark:text-white mt-8 justify-self-center">
           Meet Our Special Chefs
         </div>
         <div className="md:flex md:flex-row flex flex-col md:ml-0 ml-15 gap-15 justify-center mt-14">
@@ -14,7 +14,7 @@ export default function Masterchef(){
             <div className="border-3 border-gray-500 h-80 w-80  justify-items-center pt-4.5 rounded-full">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Xx9XhbkiDGC5FaOpzIcGhkRh6nh3FotVrA&s"
-                className="h-70 w-70 rounded-full"
+                className="h-70 w-70 rounded-full "
               ></img>
             </div>
             <div className="bg-amber-700 h-20 w-xs rounded-3xl -mt-28">
@@ -59,8 +59,8 @@ export default function Masterchef(){
             </div>
           </div>
         </div>
-        <div className="h-12 w-2xl bg-gray-200 mt-24"></div>
+        <div className="h-12 w-none md:w-2xl bg-gray-200 mt-24 dark:bg-gray-950"></div>
       </div>
-        </div>
-    )
+    </div>
+  );
 }

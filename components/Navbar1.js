@@ -4,16 +4,17 @@ import { useRouter } from "next/navigation";
 export default function Navbar1() {
   const [ToggleMenu, setToggleMenu] = useState(false);
   const [TogglePages, setTogglePages] = useState(false);
+  const [Toggle_side, setToggle_side] = useState(false);
   const router = useRouter();
   return (
     <div className="w-screen md:w-screen">
       <div className=" w-[100%] md:w-[100%]">
-        <div className="w-200 h-7md:h-[40%] md:w-[100%] bg-gray-900 flex flex-row">
-          <div className=" text-amber-500 font-bold text-[20px] pl-5 md:pl-10 pt-2 md:pt-3 block">
+        <div className="w-screen h-7md:h-[40%] md:w-[100%] bg-gray-900 flex flex-row">
+          <div className=" text-amber-500  font-bold text-[20px] pl-5 md:pl-10 pt-2 md:pt-3 block">
             Sahyadri
           </div>
-          <div className="mt-2 md:mt-3 ml-1 text-[20px]  text-amber-500 font-bold">Cafe</div>
-          <button className="md:flex flex-auto bg-[#597A2E] font-bold text-[15px] text-white w-5 md:w-15 h-8  mt-2 mb-2  mr-98 md:mr-10 ml-50 md:ml-260 hover:bg-[#76AE11] pt-1 pl-1 md:pl-9.5 ">
+          <div className="mt-2 md:mt-3 ml-1 text-[20px]  text-amber-500 font-bold ">Cafe</div>
+          <button className="md:flex flex-auto bg-[#597A2E] font-bold text-[15px] text-white w-15 md:w-15 h-8  mt-2 mb-2  mr-98 md:mr-10 ml-50 md:ml-260 hover:bg-[#76AE11] pt-1 pl-2 pr-2 md:pr-0 md:pl-9.5 ">
             Buy
           </button>
         </div>
@@ -47,7 +48,7 @@ export default function Navbar1() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-mail-icon lucide-mail w-5 h-5 md:w-7 md:h-7"
+              class="lucide lucide-mail-icon lucide-mail w-5 h-5 md:w-7 md:h-7"
             >
               <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
               <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -75,7 +76,7 @@ export default function Navbar1() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="hidden md:block lucide lucide-languages-icon lucide-languages -ml-6 -mt-8"
+                class="hidden md:block lucide lucide-languages-icon lucide-languages -ml-6 -mt-8"
               >
                 <path d="m5 8 6 6" />
                 <path d="m4 14 6-6 2-3" />
@@ -97,7 +98,7 @@ export default function Navbar1() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="hidden md:block lucide lucide-facebook-icon lucide-facebook ml-10 mt-3"
+            class="hidden md:block lucide lucide-facebook-icon lucide-facebook ml-10 mt-3"
           >
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg>
@@ -111,7 +112,7 @@ export default function Navbar1() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="hidden md:block lucide lucide-instagram-icon lucide-instagram ml-4 mt-3"
+            class="hidden md:block lucide lucide-instagram-icon lucide-instagram ml-4 mt-3"
           >
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -127,7 +128,7 @@ export default function Navbar1() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="hidden md:block lucide lucide-twitter-icon lucide-twitter ml-4 mt-3"
+            class="hidden md:block lucide lucide-twitter-icon lucide-twitter ml-4 mt-3"
           >
             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
           </svg>
@@ -141,7 +142,7 @@ export default function Navbar1() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="hidden md:block lucide lucide-youtube-icon lucide-youtube ml-4 mt-3"
+            class="hidden md:block lucide lucide-youtube-icon lucide-youtube ml-4 mt-3"
           >
             <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
             <path d="m10 15 5-3-5-3z" />
@@ -157,31 +158,70 @@ export default function Navbar1() {
         />
 
         <div className="grid grid-col-4 gap-2 absolute top-40 border-b-1 border-gray-500 w-[100%]">
-          {/* <button onClick={()}> */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"
+          <button
+            onClick={() => {
+              setToggle_side(!Toggle_side);
+            }}
           >
-            <path d="M4 5h16" />
-            <path d="M4 12h16" />
-            <path d="M4 19h16" />
-          </svg>
-          {/* </button> */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              class="md:hidden block lucide lucide-menu-icon lucide-menu -mt-26 ml-5"
+            >
+              <path d="M4 5h16" />
+              <path d="M4 12h16" />
+              <path d="M4 19h16" />
+            </svg>
+          </button>
+          {Toggle_side && (
+            <div className="md:hidden rounded-r-[5px] h-[500px] w-[400px] absolute bg-gradient-to-r from-[#ececec] via-[#b5b5b5] to-[#929292] -mt-18">
+              <img
+                src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo.png&w=750&q=75"
+                className="h-25 w-30 pt-5 pl-5 "
+              ></img>
+              <div className="flex flex-col">
+                <button
+                  onClick={() => router.push("../")}
+                  className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
+                >
+                  Home
+                </button>
+                <div className=" absolute mt-18 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                <button
+                  onClick={() => router.push("../login")}
+                  className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
+                >
+                  Login
+                </button>
+                <div className=" absolute mt-35 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                <button
+                  onClick={() => router.push("../menu")}
+                  className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif"
+                >
+                  Menu
+                </button>
+                <div className=" absolute mt-53 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+                <button className="text-[#010203] font-semibold pt-10 -ml-50 text-[20px] font-serif">
+                  Blogs
+                </button>
+                <div className=" absolute mt-70 ml-10 border-b-1 border-gray-500 w-[70%]"></div>
+              </div>
+            </div>
+          )}
           <div>
             <img
               src="https://restan-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimg%2Flogo-light.png&w=1920&q=75"
               className="-mt-17 md:-mt-5  md:left-10 h-20 md:h-15 w-32 md:w-25 ml-40 md:ml-10 md:mb-3"
             ></img>
           </div>
-          <div className=" ml-20 md:ml-80 md:-mt-10 ">
+          <div className=" ml-20 md:ml-60 md:-mt-10 ">
             <div className="hidden md:block grid grid-cols-4">
               {/* HOME */}
               <ul className="flex flex-row">
@@ -268,7 +308,7 @@ export default function Navbar1() {
                   setToggleMenu(!ToggleMenu);
                   setTogglePages(false);
                 }}
-                className="absolute text-[18px] text-white ml-90 font-serif font-semibold w-20 -mt-6.5"
+                className="absolute text-[18px] text-white ml-85 font-serif font-semibold w-20 -mt-6.5"
               >
                 Menu
               </button>
@@ -279,7 +319,7 @@ export default function Navbar1() {
                       id="Menudrop"
                       className={`${
                         ToggleMenu ? "block" : "hidden"
-                      } absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-40 h-50 ml-93 mt-5 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}
+                      } absolute rounded-[10px] inset-shadow-sm bg-gradient-to-r from-[#DBDED9] to-[#77512A] w-40 h-50 ml-86 mt-5 motion-safe:animate-[wiggle_1s_ease-in-out_infinite] `}
                     >
                       <div className="mt-5 ml-5  ">
                         <div
@@ -315,6 +355,13 @@ export default function Navbar1() {
                 </ul>
               )}
               {/* BLOG */}
+              <button className="absolute text-[18px] text-white ml-120 font-serif font-semibold w-20 -mt-6.5">
+                Blog
+              </button>
+              {/*SHOPS*/}
+              <button className="absolute text-[18px] text-white ml-150 font-serif font-semibold w-20 -mt-6.5">
+                Shops
+              </button>
             </div>
             <div>
               <svg
@@ -325,7 +372,7 @@ export default function Navbar1() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="block w-7 md:w-10 h-7 md:h-10 -mt-33 md:-mt-15 ml-65 md:ml-180 lucide lucide-shopping-basket-icon lucide-shopping-basket text-white"
+                className="block w-7 md:w-10 h-7 md:h-10 -mt-33 md:-mt-15 ml-65 md:ml-200 lucide lucide-shopping-basket-icon lucide-shopping-basket text-white"
               >
                 <path d="m15 11-1 9" />
                 <path d="m19 11-4-7" />
@@ -336,7 +383,7 @@ export default function Navbar1() {
                 <path d="m9 11 1 9" />
               </svg>
             </div>
-            <div className=" hidden md:block border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-10 ml-200 hover:bg-white hover:text-black cursor-pointer">
+            <div className=" hidden md:block border-1 border-white font-bold text-[20px] text-white w-40 h-10 rounded-[5px] pl-2 pt-1 -mt-10 ml-230 hover:bg-white hover:text-black cursor-pointer">
               <button>RESERVATION</button>
             </div>
           </div>
