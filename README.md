@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Sahyadri Café is a modern, responsive café website built using Next.js and Tailwind CSS.
+It provides users with an elegant browsing experience across 6 fully designed pages:
+Home, Menu, Login, Register, Chef, and About.
 
-## Getting Started
+---
 
-First, run the development server:
+ Home Page
 
-```bash
+A welcoming landing page showcasing the café atmosphere, featured dishes, and special highlights.
+
+ Menu Page
+
+A structured list of food & beverages with images, prices, and categories for easy browsing.
+
+ Login Page
+
+Secure authentication for existing users.
+
+Register Page
+
+Allows new users to create an account.
+
+ Chef Page
+
+Showcases professional chefs, their skills, and specialties.
+
+ About Page
+
+Provides background and details about Sahyadri Café.
+
+ Responsive Design
+
+Optimized for mobile, tablet, and desktop using Tailwind CSS.
+
+---
+
+ Technologies Used
+
+Next.js 13+ (App Router)
+
+React.js
+
+Tailwind CSS
+
+JavaScript 
+
+Git & GitHub for version control
+
+
+---
+
+ Installation & Setup
+
+Follow these steps to run the project locally:
+
+# Clone the repository
+git clone https://github.com/Hrithik-kc/Milestone-1
+
+# Navigate into the project folder
+cd Milestone-1
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project will run at:
+ http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Project Structure
 
-## Learn More
+app/
+  page.js              # Home page
+  menu/
+    page.js            # Menu page
+  login/
+    page.js            # Login page
+  register/
+    page.js            # Register page
+  chef/
+    page.js            # Chef page
+  about/
+    page.js            # About page
 
-To learn more about Next.js, take a look at the following resources:
+components/            # Reusable UI components
+styles/                # Global styles (if any)
+public/                # Images & static files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+ Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is deployed using Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ Live Project Link:
+
+https://milestone-1-rust-beta.vercel.app/
